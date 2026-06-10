@@ -7,12 +7,12 @@ const CTA = () => {
         LET'S build it
       </span>
 
-      <h2 className="text-[#111] font-bold text-[42px] sm:text-5xl md:text-[66px] lg:leading-[1.2] tracking-[-0.02em] mb-7">
+      <h2 className="text-[#111] font-bold text-3xl md:text-[40px] lg:text-[42px] lg:leading-[1.2] tracking-[-0.02em] mb-7">
         Your Product Is <br className="hidden md:block" />
         Not Goind To Build <span className="text-[#fb1d10]">Itself</span>
       </h2>
 
-      <p className="text-[#9ca3af] text-[18px] md:text-[22px] lg:text-[24px] leading-[1.5] font-light max-w-[70%] mb-8">
+      <p className="text-[#9ca3af] text-[18px] md:text-[22px] lg:text-[24px] leading-[1.5] font-light lg:max-w-[70%] mb-8">
         You have the funding, the vision, and the pressure to deliver. We have
         the team, the process, and the track record to get you there. Let's talk
         about your build.

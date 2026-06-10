@@ -1,3 +1,7 @@
+"use client";
+import { motion } from "motion/react";
+import { useState } from "react";
+
 const services = [
   {
     title: "YOU HAVE DESIGNS BUT NO BUILD TEAM",
@@ -17,6 +21,7 @@ const services = [
 ];
 
 export default function WhatWeDoSection() {
+  const [activeIndex, setActiveIndex] = useState(0);
   return (
     <section className="w-full padding-x py-16 md:py-24 flex flex-col items-center">
       <div className="text-center mb-12 flex flex-col items-center">
@@ -39,23 +44,60 @@ export default function WhatWeDoSection() {
         </div>
       </div>
 
-      <div className="w-full bg-[#F2F2F2] rounded-xl flex flex-col mb-12 overflow-hidden shadow-sm">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        // viewport={{ once: true, margin: "-50px" }}
+        // variants={{
+        //   visible: {
+        //     transition: { staggerChildren: 0.15 },
+        //   },
+        // }}
+        className="w-full bg-[#f3f3f3] rounded-xl flex flex-col mb-12 overflow-hidden shadow-sm"
+      >
         {services.map((service, index) => (
-          <div
+          <motion.div
             key={index}
-            className={`relative p-6 md:p-8 flex flex-col group border-l-[3px] border-[#f2f2f2] hover:border-[#F40E00] transition-all duration-200 ${index !== 2 && "border-b-2 border-b-white hover:border-b-white"}`}
+            variants={{
+              hidden: { opacity: 0, x: 0 },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: { type: "spring", stiffness: 100, damping: 20 },
+              },
+            }}
+            onMouseEnter={() => setActiveIndex(index)}
+            onFocus={() => setActiveIndex(index)}
+            tabIndex={0}
+            className={`relative p-6 md:p-8 flex flex-col cursor-default transition-colors duration-300 ${
+              activeIndex === index
+                ? "bg-[#eaeaea] md:bg-transparent"
+                : "bg-transparent"
+            } ${
+              index !== services.length - 1 ? "border-b-2 border-white" : ""
+            }`}
           >
-            <h3 className="red-text font-bold uppercase tracking-wide text-sm md:text-base lg:text-lg mb-2">
+            {activeIndex === index && (
+              <motion.div
+                layoutId="active-indicator"
+                className="absolute left-0 top-0 bottom-0 w-1 md:w-1.5 bg-[#F02F24] rounded-r-sm z-10"
+                transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              />
+            )}
+            <h3 className="text-[#F02F24] font-bold uppercase tracking-wide text-sm md:text-sm lg:text-lg mb-2 z-10">
               {service.title}
             </h3>
-            <p className="text-gray-900 font-medium text-sm md:text-base lg:text-lg">
+            <p className="text-gray-900 font-medium text-base md:text-[1.1rem] lg:text-lg z-10">
               {service.description}
             </p>
-          </div>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
-      <button className="bg-[#F02F24] text-white px-10 py-4 rounded-[14px] font-bold text-[1.05rem] cursor-pointer shadow-md shadow-red-500/20 hover:bg-[#000] transition-colors">
+      <button
+        type="button"
+        className="bg-[#F02F24] text-white px-10 py-4 lg:py-5 rounded-[14px] font-bold text-[1.05rem] cursor-pointer shadow-md shadow-red-500/20 hover:bg-[#000] transition-colors"
+      >
         Book a Free Discovery Call
       </button>
     </section>

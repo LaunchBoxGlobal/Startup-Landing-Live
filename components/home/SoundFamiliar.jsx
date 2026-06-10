@@ -1,6 +1,4 @@
-"use client";
 import React from "react";
-import { motion } from "motion/react";
 
 const criteria = [
   "You raised pre-seed or seed funding but have no engineering team yet.",
@@ -39,36 +37,13 @@ const SoundFamiliar = () => {
           <div className="h-6 md:h-8 w-full shrink-0" aria-hidden="true" />
 
           {/* Inner Content Grid */}
-          <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-50px" }}
-            variants={{
-              visible: {
-                transition: { staggerChildren: 0.1 },
-              },
-            }}
-            className="grid grid-cols-1 md:grid-cols-2 bg-gray-200 gap-[1px] border-y border-gray-200"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 bg-gray-200 gap-[1px] border-y border-gray-200">
             {criteria.map((text, index) => {
               const number = String(index + 1).padStart(2, "0");
               return (
-                <motion.div
+                <div
                   key={index}
-                  variants={{
-                    hidden: { opacity: 0, y: 20 },
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                      transition: {
-                        type: "spring",
-                        stiffness: 120,
-                        damping: 20,
-                      },
-                    },
-                  }}
-                  whileHover={{ scale: 1, backgroundColor: "#fafafa" }}
-                  className="bg-white flex items-start gap-4 md:gap-6 p-6 md:px-8 md:py-10 group cursor-default"
+                  className="bg-white hover:bg-gray-100 transition-all duration-200 flex items-start gap-4 md:gap-6 p-6 md:px-8 md:py-10 group cursor-default"
                 >
                   <span className="text-[2.25rem] md:text-[2.5rem] font-black tracking-tight red-text shrink-0 leading-none mt-1 select-none transition-transform duration-300 group-hover:scale-105">
                     {number}
@@ -76,28 +51,22 @@ const SoundFamiliar = () => {
                   <p className="text-gray-900 text-base md:text-[1.1rem] leading-[1.4] font-medium p-0 m-0">
                     {text}
                   </p>
-                </motion.div>
+                </div>
               );
             })}
-          </motion.div>
+          </div>
 
           {/* Bottom Gray Padding Bar */}
           <div className="h-6 md:h-8 w-full shrink-0" aria-hidden="true" />
         </div>
 
         {/* Trailing Footer Text */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6, duration: 0.5 }}
-          className="mt-6 md:mt-8 px-1"
-        >
+        <div className="mt-6 md:mt-8 px-1">
           <p className="text-[1.05rem] md:text-[1.15rem] leading-relaxed text-gray-900 font-medium">
             If this is where you are right now, you are exactly who we built
             this <span className="red-text font-bold">for.</span>
           </p>
-        </motion.div>
+        </div>
       </section>
     </section>
   );
