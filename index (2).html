@@ -1,0 +1,782 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LaunchBox Global - Premium SaaS Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+      :root {
+        --brand-red: #f40e00;
+      }
+      body {
+        background-color: #fafafa;
+        overflow: hidden;
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+      }
+
+      /* Background Grid */
+      .bg-grid {
+        background-size: 60px 60px;
+        background-image:
+          linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+          linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+        animation: gridMove 30s linear infinite;
+      }
+      @keyframes gridMove {
+        0% {
+          background-position: 0 0;
+        }
+        100% {
+          background-position: 60px 60px;
+        }
+      }
+
+      /* Glassmorphism */
+      .glass-card {
+        background: rgba(255, 255, 255, 0.65);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow:
+          0 4px 24px rgba(0, 0, 0, 0.04),
+          inset 0 1px 0 rgba(255, 255, 255, 0.8);
+      }
+
+      /* Dashboard Image */
+      .dashboard-image {
+        will-change: transform, opacity;
+        box-shadow:
+          0 8px 32px rgba(0, 0, 0, 0.06),
+          0 2px 8px rgba(0, 0, 0, 0.02);
+      }
+
+      /* Graph Animation */
+      .graph-path {
+        stroke-dasharray: 300;
+        stroke-dashoffset: 300;
+      }
+
+      /* Rocket Particles */
+      .particle {
+        position: absolute;
+        width: 3px;
+        height: 3px;
+        background: var(--brand-red);
+        border-radius: 50%;
+        opacity: 0;
+      }
+
+      /* Ambient Glow */
+      .ambient-glow {
+        background: radial-gradient(
+          circle at 50% 50%,
+          rgba(244, 14, 0, 0.06),
+          transparent 60%
+        );
+      }
+
+      .sequence-element {
+        will-change: transform, opacity;
+      }
+    </style>
+  </head>
+  <body class="relative w-full h-screen flex items-center justify-center">
+    <!-- Background Effects -->
+    <div class="absolute inset-0 bg-grid pointer-events-none"></div>
+    <div class="absolute inset-0 ambient-glow pointer-events-none"></div>
+
+    <!-- Moving Connection Dots -->
+    <div
+      class="absolute inset-0 pointer-events-none overflow-hidden"
+      id="dots-container"
+    >
+      <div class="dot absolute w-1.5 h-1.5 bg-red-500/20 rounded-full"></div>
+      <div class="dot absolute w-1 h-1 bg-red-500/30 rounded-full"></div>
+      <div class="dot absolute w-2 h-2 bg-red-500/10 rounded-full"></div>
+      <div class="dot absolute w-1 h-1 bg-red-500/20 rounded-full"></div>
+      <div class="dot absolute w-1.5 h-1.5 bg-red-500/15 rounded-full"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div
+      class="relative z-10 w-full max-w-6xl mx-auto px-8 flex flex-col items-center"
+    >
+      <!-- 1. Timeline Animation -->
+      <div
+        class="sequence-element timeline-container relative flex items-center justify-center gap-8 mb-12 w-full max-w-3xl"
+      >
+        <svg
+          class="absolute top-1/2 left-0 w-full h-4 -translate-y-1/2 pointer-events-none"
+          style="overflow: visible"
+        >
+          <line
+            class="timeline-line-bg"
+            x1="5%"
+            y1="50%"
+            x2="95%"
+            y2="50%"
+            stroke="#E5E7EB"
+            stroke-width="2"
+          />
+          <line
+            class="timeline-line-active"
+            x1="5%"
+            y1="50%"
+            x2="95%"
+            y2="50%"
+            stroke="#F40E00"
+            stroke-width="2"
+            stroke-dasharray="1000"
+            stroke-dashoffset="1000"
+          />
+        </svg>
+
+        <div
+          class="timeline-step flex flex-col items-center gap-3 relative z-10"
+        >
+          <div
+            class="step-node w-4 h-4 rounded-full bg-white border-2 border-gray-300 shadow-sm transition-colors duration-300"
+          ></div>
+          <span
+            class="text-xs font-semibold text-gray-400 tracking-widest uppercase transition-colors duration-300"
+            >Idea</span
+          >
+        </div>
+        <div
+          class="timeline-step flex flex-col items-center gap-3 relative z-10"
+        >
+          <div
+            class="step-node w-4 h-4 rounded-full bg-white border-2 border-gray-300 shadow-sm transition-colors duration-300"
+          ></div>
+          <span
+            class="text-xs font-semibold text-gray-400 tracking-widest uppercase transition-colors duration-300"
+            >Design</span
+          >
+        </div>
+        <div
+          class="timeline-step flex flex-col items-center gap-3 relative z-10"
+        >
+          <div
+            class="step-node w-4 h-4 rounded-full bg-white border-2 border-gray-300 shadow-sm transition-colors duration-300"
+          ></div>
+          <span
+            class="text-xs font-semibold text-gray-400 tracking-widest uppercase transition-colors duration-300"
+            >Build</span
+          >
+        </div>
+        <div
+          class="timeline-step flex flex-col items-center gap-3 relative z-10"
+        >
+          <div
+            class="step-node w-4 h-4 rounded-full bg-white border-2 border-gray-300 shadow-sm transition-colors duration-300"
+          ></div>
+          <span
+            class="text-xs font-semibold text-gray-400 tracking-widest uppercase transition-colors duration-300"
+            >Launch</span
+          >
+        </div>
+        <div
+          class="timeline-step flex flex-col items-center gap-3 relative z-10"
+        >
+          <div
+            class="step-node w-4 h-4 rounded-full bg-white border-2 border-gray-300 shadow-sm transition-colors duration-300"
+          ></div>
+          <span
+            class="text-xs font-semibold text-gray-400 tracking-widest uppercase transition-colors duration-300"
+            >Investor Ready</span
+          >
+        </div>
+      </div>
+
+      <!-- Middle Section: Funding, Cube, Team -->
+      <div class="relative w-full flex items-center justify-between mb-16">
+        <!-- 2. Funding Cards -->
+        <div class="sequence-element funding-cards flex flex-col gap-4 w-64">
+          <div
+            class="funding-card glass-card rounded-xl p-4 flex items-center gap-3"
+          >
+            <div
+              class="check-icon w-8 h-8 rounded-full bg-red-50 flex items-center justify-center text-[#F40E00]"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div class="text-sm font-bold text-gray-800">Funding Secured</div>
+              <div class="text-xs text-gray-500">Series A Ready</div>
+            </div>
+          </div>
+          <div
+            class="funding-card glass-card rounded-xl p-4 flex items-center gap-3"
+          >
+            <div
+              class="check-icon w-8 h-8 rounded-full bg-red-50 flex items-center justify-center text-[#F40E00]"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div class="text-sm font-bold text-gray-800">
+                Seed Round Closed
+              </div>
+              <div class="text-xs text-gray-500">120% Oversubscribed</div>
+            </div>
+          </div>
+          <div
+            class="funding-card glass-card rounded-xl p-4 flex items-center gap-3"
+          >
+            <div
+              class="check-icon w-8 h-8 rounded-full bg-red-50 flex items-center justify-center text-[#F40E00]"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="3"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+            <div>
+              <div class="text-sm font-bold text-gray-800">
+                Investor Updates
+              </div>
+              <div class="text-xs text-gray-500">Automated Reporting</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Central Dashboard Image & 6. Rocket Element -->
+        <div class="relative flex flex-col items-center">
+          <img
+            src="div.dashboard_4a6ac717.png"
+            alt="Launch Dashboard"
+            class="dashboard-image sequence-element max-w-md w-full h-auto rounded-xl border border-gray-100/50"
+          />
+
+          <!-- Rocket Element -->
+          <div
+            class="sequence-element rocket-container absolute -top-6 -right-6 flex flex-col items-center"
+          >
+            <div
+              class="rocket-body"
+              style="
+                width: 0;
+                height: 0;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-bottom: 18px solid #f40e00;
+                filter: drop-shadow(0 4px 6px rgba(244, 14, 0, 0.2));
+              "
+            ></div>
+            <div class="rocket-trail relative w-3 h-10">
+              <div class="particle" style="left: 1px"></div>
+              <div class="particle" style="left: 4px"></div>
+              <div class="particle" style="left: 7px"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Product Team Panel -->
+        <div class="sequence-element team-panel flex flex-col gap-4 w-64">
+          <div
+            class="team-icon glass-card rounded-xl p-3 flex items-center gap-3"
+          >
+            <div
+              class="icon-box w-9 h-9 rounded-lg bg-red-50 flex items-center justify-center text-[#F40E00]"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <span class="text-sm font-semibold text-gray-700">Engineering</span>
+          </div>
+          <div
+            class="team-icon glass-card rounded-xl p-3 flex items-center gap-3"
+          >
+            <div
+              class="icon-box w-9 h-9 rounded-lg bg-red-50 flex items-center justify-center text-[#F40E00]"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                <path d="M2 2l7.586 7.586"></path>
+                <circle cx="11" cy="11" r="2"></circle>
+              </svg>
+            </div>
+            <span class="text-sm font-semibold text-gray-700"
+              >Product Design</span
+            >
+          </div>
+          <div
+            class="team-icon glass-card rounded-xl p-3 flex items-center gap-3"
+          >
+            <div
+              class="icon-box w-9 h-9 rounded-lg bg-red-50 flex items-center justify-center text-[#F40E00]"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <span class="text-sm font-semibold text-gray-700"
+              >Go-to-Market</span
+            >
+          </div>
+        </div>
+
+        <!-- Connection Lines SVG -->
+        <svg
+          class="absolute inset-0 w-full h-full pointer-events-none"
+          style="z-index: -1; overflow: visible"
+        >
+          <path
+            class="connection-line"
+            d="M 50% 50% Q 30% 50% 28% 25%"
+            fill="none"
+            stroke="#F40E00"
+            stroke-width="1.5"
+            stroke-dasharray="4 4"
+            opacity="0"
+            stroke-dashoffset="300"
+          />
+          <path
+            class="connection-line"
+            d="M 50% 50% Q 30% 50% 28% 50%"
+            fill="none"
+            stroke="#F40E00"
+            stroke-width="1.5"
+            stroke-dasharray="4 4"
+            opacity="0"
+            stroke-dashoffset="300"
+          />
+          <path
+            class="connection-line"
+            d="M 50% 50% Q 30% 50% 28% 75%"
+            fill="none"
+            stroke="#F40E00"
+            stroke-width="1.5"
+            stroke-dasharray="4 4"
+            opacity="0"
+            stroke-dashoffset="300"
+          />
+
+          <path
+            class="connection-line"
+            d="M 50% 50% Q 70% 50% 72% 25%"
+            fill="none"
+            stroke="#F40E00"
+            stroke-width="1.5"
+            stroke-dasharray="4 4"
+            opacity="0"
+            stroke-dashoffset="300"
+          />
+          <path
+            class="connection-line"
+            d="M 50% 50% Q 70% 50% 72% 50%"
+            fill="none"
+            stroke="#F40E00"
+            stroke-width="1.5"
+            stroke-dasharray="4 4"
+            opacity="0"
+            stroke-dashoffset="300"
+          />
+          <path
+            class="connection-line"
+            d="M 50% 50% Q 70% 50% 72% 75%"
+            fill="none"
+            stroke="#F40E00"
+            stroke-width="1.5"
+            stroke-dasharray="4 4"
+            opacity="0"
+            stroke-dashoffset="300"
+          />
+        </svg>
+      </div>
+
+      <!-- 5. Product Screens -->
+      <div
+        class="sequence-element product-screens flex gap-4 justify-center w-full"
+      >
+        <div
+          class="product-screen glass-card rounded-xl p-3 w-28 flex flex-col gap-2"
+        >
+          <div class="flex gap-1 mb-1">
+            <div class="w-1.5 h-1.5 rounded-full bg-red-400"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-300"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-300"></div>
+          </div>
+          <div class="h-1 w-3/4 bg-gray-200 rounded"></div>
+          <div class="h-1 w-1/2 bg-gray-200 rounded"></div>
+          <div class="mt-auto pt-2">
+            <div class="text-[10px] font-semibold text-gray-500 text-center">
+              Marketplace
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="product-screen glass-card rounded-xl p-3 w-28 flex flex-col gap-2"
+        >
+          <div class="flex gap-1 mb-1">
+            <div class="w-1.5 h-1.5 rounded-full bg-red-400"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-300"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-300"></div>
+          </div>
+          <div class="h-1 w-3/4 bg-gray-200 rounded"></div>
+          <div
+            class="h-8 w-full bg-gray-100 rounded mt-1 relative overflow-hidden"
+          >
+            <svg
+              class="absolute bottom-0 left-0 w-full h-full"
+              viewBox="0 0 100 40"
+              preserveAspectRatio="none"
+            >
+              <path
+                class="graph-path"
+                d="M0,35 Q25,5 50,25 T100,15"
+                fill="none"
+                stroke="#F40E00"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+          <div class="mt-auto pt-2">
+            <div class="text-[10px] font-semibold text-gray-500 text-center">
+              Mobility App
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="product-screen glass-card rounded-xl p-3 w-32 flex flex-col gap-2"
+        >
+          <div class="flex gap-1 mb-1">
+            <div class="w-1.5 h-1.5 rounded-full bg-red-400"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-300"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-300"></div>
+          </div>
+          <div class="h-1 w-3/4 bg-gray-200 rounded"></div>
+          <div class="h-1 w-1/2 bg-gray-200 rounded"></div>
+          <div
+            class="h-8 w-full bg-gray-100 rounded mt-1 relative overflow-hidden"
+          >
+            <svg
+              class="absolute bottom-0 left-0 w-full h-full"
+              viewBox="0 0 100 40"
+              preserveAspectRatio="none"
+            >
+              <path
+                class="graph-path"
+                d="M0,25 Q30,35 60,15 T100,20"
+                fill="none"
+                stroke="#F40E00"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+          <div class="mt-auto pt-2">
+            <div class="text-[10px] font-semibold text-gray-500 text-center">
+              Booking Platform
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="product-screen glass-card rounded-xl p-3 w-32 flex flex-col gap-2"
+        >
+          <div class="flex gap-1 mb-1">
+            <div class="w-1.5 h-1.5 rounded-full bg-red-400"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-300"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-300"></div>
+          </div>
+          <div class="flex gap-2 mt-1">
+            <div class="h-6 w-1/2 bg-gray-100 rounded"></div>
+            <div class="h-6 w-1/2 bg-gray-100 rounded"></div>
+          </div>
+          <div
+            class="h-8 w-full bg-gray-100 rounded mt-1 relative overflow-hidden"
+          >
+            <svg
+              class="absolute bottom-0 left-0 w-full h-full"
+              viewBox="0 0 100 40"
+              preserveAspectRatio="none"
+            >
+              <path
+                class="graph-path"
+                d="M0,30 Q20,10 40,20 T100,5"
+                fill="none"
+                stroke="#F40E00"
+                stroke-width="2"
+              />
+            </svg>
+          </div>
+          <div class="mt-auto pt-2">
+            <div class="text-[10px] font-semibold text-gray-500 text-center">
+              SaaS Dashboard
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="product-screen glass-card rounded-xl p-3 w-28 flex flex-col gap-2"
+        >
+          <div class="flex gap-1 mb-1">
+            <div class="w-1.5 h-1.5 rounded-full bg-red-400"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-300"></div>
+            <div class="w-1.5 h-1.5 rounded-full bg-gray-300"></div>
+          </div>
+          <div class="h-1 w-3/4 bg-gray-200 rounded"></div>
+          <div class="h-1 w-1/2 bg-gray-200 rounded"></div>
+          <div class="mt-auto pt-2">
+            <div class="text-[10px] font-semibold text-gray-500 text-center">
+              Consumer App
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ repeat: -1, duration: 8 });
+
+      // 0.0 - 2.0: Timeline Animation
+      tl.fromTo(
+        ".timeline-line-active",
+        { strokeDashoffset: 1000 },
+        { strokeDashoffset: 0, duration: 2, ease: "power2.inOut" },
+        0,
+      );
+
+      tl.fromTo(
+        ".timeline-step .step-node",
+        { scale: 0.8, borderColor: "#D1D5DB" },
+        { scale: 1, borderColor: "#F40E00", duration: 0.4, stagger: 0.3 },
+        0.2,
+      );
+
+      tl.fromTo(
+        ".timeline-step span",
+        { color: "#9CA3AF" },
+        { color: "#111827", duration: 0.4, stagger: 0.3 },
+        0.2,
+      );
+
+      // 1.0 - 2.5: Funding Cards
+      tl.fromTo(
+        ".funding-card",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, duration: 0.6, stagger: 0.3, ease: "power2.out" },
+        1.0,
+      );
+
+      // 2.0 - 2.8: Dashboard Reveal
+      tl.fromTo(
+        ".dashboard-image",
+        { opacity: 0, y: 20, scale: 0.96 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.8, ease: "power2.out" },
+        2.0,
+      );
+
+      // 2.0 - 3.5: Team Panel & Lines
+      tl.fromTo(
+        ".team-panel",
+        { opacity: 0, x: 20 },
+        { opacity: 1, x: 0, duration: 0.8 },
+        2.0,
+      );
+
+      tl.fromTo(
+        ".team-icon",
+        { opacity: 0, scale: 0.8 },
+        { opacity: 1, scale: 1, duration: 0.4, stagger: 0.2 },
+        2.2,
+      );
+
+      tl.fromTo(
+        ".connection-line",
+        { strokeDashoffset: 300, opacity: 0 },
+        {
+          strokeDashoffset: 0,
+          opacity: 0.4,
+          duration: 1,
+          ease: "power2.inOut",
+        },
+        2.5,
+      );
+
+      // 3.0 - 4.5: Product Screens
+      tl.fromTo(
+        ".product-screen",
+        { opacity: 0, y: 40 },
+        { opacity: 1, y: 0, duration: 0.6, stagger: 0.15, ease: "power3.out" },
+        3.0,
+      );
+
+      tl.fromTo(
+        ".graph-path",
+        { strokeDashoffset: 300 },
+        { strokeDashoffset: 0, duration: 1.5, ease: "power2.inOut" },
+        3.5,
+      );
+
+      // 6.5 - 8.0: Seamless Fade Out to reset
+      tl.to(
+        ".timeline-step .step-node",
+        { borderColor: "#D1D5DB", duration: 0.5 },
+        6.5,
+      );
+      tl.to(".timeline-step span", { color: "#9CA3AF", duration: 0.5 }, 6.5);
+      tl.to(
+        ".timeline-line-active",
+        { strokeDashoffset: 1000, duration: 1 },
+        6.5,
+      );
+
+      tl.to(
+        ".funding-card, .team-panel, .product-screen, .dashboard-image",
+        {
+          opacity: 0,
+          y: -10,
+          duration: 1.2,
+          stagger: 0.1,
+          ease: "power2.in",
+        },
+        6.8,
+      );
+
+      tl.to(".connection-line", { opacity: 0, duration: 0.8 }, 6.8);
+
+      // Continuous Animations (independent of timeline loop)
+
+      // Dashboard Image Float
+      gsap.to(".dashboard-image", {
+        y: -3,
+        duration: 5,
+        yoyo: true,
+        repeat: -1,
+        ease: "sine.inOut",
+      });
+
+      // Rocket Float
+      gsap.to(".rocket-container", {
+        y: -6,
+        duration: 2.5,
+        yoyo: true,
+        repeat: -1,
+        ease: "sine.inOut",
+      });
+
+      // Rocket Particles
+      gsap.to(".particle", {
+        y: 15,
+        opacity: 0,
+        duration: 1.2,
+        stagger: 0.4,
+        repeat: -1,
+        ease: "power1.out",
+      });
+
+      // Background Dots Movement
+      gsap.utils.toArray(".dot").forEach((dot, i) => {
+        gsap.to(dot, {
+          x: `random(-50, 50)`,
+          y: `random(-50, 50)`,
+          duration: `random(8, 15)`,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+          delay: i * 2,
+        });
+      });
+
+      // Micro hover movement for team icons
+      gsap.utils.toArray(".team-icon").forEach((icon, i) => {
+        gsap.to(icon, {
+          y: -3,
+          duration: 2,
+          yoyo: true,
+          repeat: -1,
+          ease: "sine.inOut",
+          delay: i * 0.5,
+        });
+      });
+
+      // Subtle floating for product screens
+      gsap.utils.toArray(".product-screen").forEach((screen, i) => {
+        gsap.to(screen, {
+          y: -4,
+          duration: 3,
+          yoyo: true,
+          repeat: -1,
+          ease: "sine.inOut",
+          delay: i * 0.3,
+        });
+      });
+    </script>
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447"
+      integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ=="
+      data-cf-beacon='{"version":"2024.11.0","token":"75124c326cb447fe934cde04713ae013","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}'
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
