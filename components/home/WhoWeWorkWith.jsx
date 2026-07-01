@@ -27,19 +27,19 @@ export default function WhoWeWorkWith() {
     <div className="section padding-x flex justify-center overflow-hidden">
       <div className="max-w-[1240px] w-full grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16">
         {/* Left Column */}
-        <div className="flex flex-col pt-8 gap-5">
-          <div className="red-text font-medium text-[32px] uppercase">
+        <div className="flex flex-col pt-8">
+          <div className="red-text font-medium text-lg md:text-xl lg:text-2xl xl:text-[32px] mb-5 uppercase">
             Who we work with
           </div>
 
-          <h1 className="text-[48px] md:text-[44px] lg:text-[72px] font-bold text-[#111827] leading-[1.05]">
+          <h1 className="section-heading">
             Built For <br className="hidden md:block" />
             Founders <br className="hidden md:block" />
             Who Are Ready <br className="hidden md:block" />
             To <span className="text-[#FF2B2B]">Move</span>
           </h1>
 
-          <p className="text-[#212121] text-[24px] leading-[1.2]">
+          <p className="text-[#212121] text-lg md:text-xl xl:text-[24px] mt-5 leading-[1.2] mb-6">
             We work best with founders who have funding, a clear vision, and the
             urgency to launch. If that is you, we should talk.
           </p>

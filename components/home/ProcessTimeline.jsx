@@ -45,7 +45,7 @@ const ProcessTimeline = () => {
   return (
     <>
       {/* ============== DESKTOP (lg and up) — unchanged original layout ============== */}
-      <div className="w-full relative py-20 pl-[5%] mt-20 hidden lg:block">
+      <div className="w-full relative pt-20 pl-[5%] mt-20 hidden lg:block">
         <ProcessTimelinePath />
 
         {/* card 1 */}
@@ -190,7 +190,7 @@ const ProcessTimeline = () => {
       </div>
 
       {/* ============== MOBILE + TABLET (below lg) — stacked vertical timeline ============== */}
-      <div className="w-full lg:hidden py-12 px-6 sm:px-10 mt-10">
+      <div className="w-full lg:hidden px-6 sm:px-10 mt-10">
         <div className="relative flex flex-col gap-12 sm:gap-14 max-w-md sm:max-w-xl mx-auto">
           {/* vertical connecting line */}
           <div className="absolute left-[27px] sm:left-[35px] top-2 bottom-2 w-px bg-gray-300 z-0" />

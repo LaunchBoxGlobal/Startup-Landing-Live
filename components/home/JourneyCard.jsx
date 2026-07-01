@@ -44,25 +44,18 @@ const JourneyCard = () => {
           return (
             <div
               key={j.title}
-              className={`flex flex-col items-center gap-3 relative group ${ind === JOURNEY.length - 1 && "-right-1"}`}
+              className={`flex flex-col items-center gap-3 relative group ${ind === JOURNEY.length - 1 && "lg:-right-1"}`}
             >
-              <div className="w-[55px] h-[55px] rounded-full bg-[#E9E9E9] flex items-center justify-center text-gray-600">
+              <div className="w-[40px] h-[40px] lg:w-[55px] lg:h-[55px] p-2 lg:p-0 rounded-full bg-[#E9E9E9] flex items-center justify-center text-gray-600">
                 <Image
                   src={j.icon}
                   alt={j.title}
                   width={j.width}
                   height={j.height}
-                  className="
-    brightness-0
-    transition-all duration-300
-    group-hover:sepia
-    group-hover:saturate-[7500%]
-    group-hover:hue-rotate-[330deg]
-    group-hover:brightness-100
-  "
+                  className="brightness-0 transition-all duration-300 group-hover:sepia group-hover:saturate-[7500%] group-hover:hue-rotate-[330deg] group-hover:brightness-100"
                 />
               </div>
-              <span className="text-[18px] font-medium text-gray-700">
+              <span className="text-[10px] md:text-base lg:text-[18px] font-medium text-gray-700">
                 {j.title}
               </span>
             </div>
@@ -70,7 +63,7 @@ const JourneyCard = () => {
         })}
       </div>
 
-      <div className="text-center font-bold text-[20px] text-gray-800 mt-8">
+      <div className="text-center font-bold text-[20px] text-gray-800 mt-8 leading-[1.2]">
         We Help you go from development to launch -{" "}
         <span className="red-text">Faster</span>
       </div>

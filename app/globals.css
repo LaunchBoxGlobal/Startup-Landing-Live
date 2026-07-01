@@ -74,5 +74,9 @@ body {
 }
 
 .section {
-  @apply bg-transparent py-24 relative;
+  @apply bg-transparent py-12 lg:py-24 relative;
+}
+
+.section-heading {
+  @apply text-3xl md:text-4xl lg:text-5xl midlg:text-6xl xl:text-[72px] font-bold text-[#111111] tracking-tight leading-[1];
 }

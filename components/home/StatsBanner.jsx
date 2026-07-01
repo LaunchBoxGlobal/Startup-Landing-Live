@@ -3,7 +3,7 @@ import React from "react";
 
 const StatsBanner = () => {
   return (
-    <div className="bg-white relative z-10 mt-14 rounded-2xl shadow-sm border border-[#EFE9E7] flex flex-col md:flex-row items-center justify-around p-6 lg:p-8 mb-16 w-full max-w-5xl mx-auto">
+    <div className="bg-white relative z-10 mt-10 lg:mt-14 rounded-2xl shadow-sm border border-[#EFE9E7] flex flex-col md:flex-row items-start md:items-center justify-around p-6 lg:p-8 mb-10 lg:mb-16 w-full lg:max-w-5xl mx-auto">
       <div className="flex items-center space-x-4 mb-6 md:mb-0">
         <div className="">
           <Image

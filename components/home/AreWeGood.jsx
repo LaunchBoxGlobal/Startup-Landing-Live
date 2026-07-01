@@ -97,12 +97,12 @@ const AreWeGood = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-2.5 lg:gap-5">
         {GOOD_FIT.map((fit) => {
           return (
             <div
               key={fit.title}
-              className="flex items-center gap-3 p-3 rounded-[16px] border border-[#EFEAEC] hover:border-green-100 hover:bg-green-50/40 transition-all group"
+              className="flex items-start md:items-center gap-3 p-3 rounded-[16px] border border-[#EFEAEC] hover:border-green-100 hover:bg-green-50/40 transition-all group"
             >
               <div>
                 <Image
@@ -114,7 +114,7 @@ const AreWeGood = () => {
                 />
               </div>
               <div className="flex-1">
-                <div className="font-bold text-gray-900 text-[17px] mb-0.5">
+                <div className="font-bold text-gray-900 text-[17px] mb-0.5 leading-none">
                   {fit.title}
                 </div>
                 <div className="text-[#909090] text-[15px] leading-snug">

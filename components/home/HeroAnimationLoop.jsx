@@ -29,7 +29,7 @@ export default function HeroAnimationLoop() {
   }, [current]);
 
   return (
-    <div className="relative h-[700px] overflow-hidden">
+    <div className="relative h-[280px] md:h-[450px] lg:h-[500px] midlg:h-[600px] overflow-hidden flex items-center justify-center">
       <AnimatePresence mode="wait">
         {current === 1 && (
           <motion.div
@@ -40,7 +40,7 @@ export default function HeroAnimationLoop() {
             transition={{
               duration: 0.4,
             }}
-            className="absolute inset-0"
+            className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-full"
           >
             <HeroAnimation isActive />
           </motion.div>
@@ -55,7 +55,7 @@ export default function HeroAnimationLoop() {
             transition={{
               duration: 0.4,
             }}
-            className="absolute inset-0"
+            className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 w-full"
           >
             <HeroAnimation2 isActive />
           </motion.div>

@@ -4,12 +4,12 @@ const WhatWeDo = () => {
   return (
     <section className="section padding-x">
       <div
-        className={`w-full relative overflow-hidden z-20 text-center flex flex-col items-center gap-3`}
+        className={`w-full relative overflow-hidden z-20 text-center flex flex-col items-center`}
       >
         <p className="red-text font-medium tracking-widest uppercase text-lg md:text-xl lg:text-2xl xl:text-[32px] mb-5">
           What we do
         </p>
-        <h2 className="text-4xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-[72px] font-bold text-[#111111] tracking-tight leading-[1]">
+        <h2 className="section-heading">
           Your External Product <br className="hidden lg:block" /> Team From
           First Call to <span className="text-[#ea2b2b]">Launch</span>
         </h2>

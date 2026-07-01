@@ -8,7 +8,7 @@ const SectionHeader = ({ pill, title, redTitle, description, className }) => {
           Sound Familiar?
         </p>
       )}
-      <h2 className="text-4xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-[72px] font-bold text-[#111111] tracking-tight leading-[1]">
+      <h2 className="section-heading">
         {title} {redTitle && <span className="text-[#ea2b2b]">{redTitle}</span>}
       </h2>
       {description && (

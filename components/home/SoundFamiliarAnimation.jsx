@@ -65,7 +65,7 @@ const SoundFamiliarAnimation = () => {
       </div>
 
       {/* central animation */}
-      <div className="w-full md:max-w-[60%] mid-lg:max-w-[650px] h-[203px] md:h-[473px] md:mt-10 relative z-20 mx-auto">
+      <div className="w-full md:w-[60%] lg:w-[53%] h-[203px] md:h-[473px] md:mt-10 relative z-20 mx-auto">
         <Image
           src="/cta-image.webp"
           alt="Call to action illustration"

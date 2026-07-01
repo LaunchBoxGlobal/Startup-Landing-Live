@@ -12,22 +12,19 @@ export default function FAQS() {
   };
 
   return (
-    <section className="section padding-x overflow-hidden grid grid-cols-1 lg:grid-cols-2 gap-10">
+    <section className="section padding-x overflow-hidden grid grid-cols-1 lg:grid-cols-2">
       {/* Header Section */}
       <div className="lg:pr-10 text-start">
         <p className="red-text font-medium tracking-widest uppercase text-lg md:text-xl lg:text-2xl xl:text-[32px] mb-5 relative z-10">
           Common Questions
         </p>
-        <h2
-          id="faqs"
-          className="text-4xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-[72px] font-bold text-[#111111] tracking-tight lg:leading-[1] relative z-10"
-        >
+        <h2 id="faqs" className="section-heading relative z-10">
           A Few More Things Founders Usually
           <span className="text-[#ea2b2b]">Ask</span>
         </h2>
       </div>
 
-      <div className="w-full flex flex-col gap-3 md:gap-4">
+      <div className="w-full flex flex-col gap-3 md:gap-4 mt-10">
         {HOME_PAGE_FAQS?.map((faq, index) => {
           const isOpen = openIndex === index;
 

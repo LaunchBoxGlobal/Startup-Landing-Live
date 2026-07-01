@@ -1,7 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import HeroAnimation from "./HeroAnimation";
-import HeroAnimation2 from "./HeroAnimation2";
 import HeroAnimationLoop from "./HeroAnimationLoop";
 
 const Hero = () => {
@@ -51,8 +49,6 @@ const Hero = () => {
       </section>
 
       <HeroAnimationLoop />
-      {/* <HeroAnimation /> */}
-      {/* <HeroAnimation2 /> */}
 
       <Image
         src={"/hero-border-lines.png"}

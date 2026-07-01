@@ -3,10 +3,10 @@ import Image from "next/image";
 
 export default function WhatChangesCards() {
   return (
-    <div className="w-full bg-transparent flex items-center justify-center pt-16">
+    <div className="w-full bg-transparent flex items-center justify-center pt-8 lg:pt-16">
       <div className="max-w-7xl w-full flex flex-col gap-6">
         {/* Main Comparison Card */}
-        <div className="bg-white rounded-[2rem] w-full p-6 md:p-8 lg:p-10 border border-red-50 relative z-20">
+        <div className="bg-white rounded-[2rem] w-full p-3 md:p-8 lg:p-10 border border-red-50 relative z-20">
           {/* Desktop Headers */}
           <div className="hidden lg:grid grid-cols-[1fr_auto_1fr] gap-8 mb-8 md:mb-10 items-center">
             <div className="flex justify-center">
@@ -40,10 +40,10 @@ export default function WhatChangesCards() {
                     />
                   </div>
                   <div className="flex flex-col gap-1 mt-0.5">
-                    <h3 className="text-lg font-extrabold text-gray-900 tracking-wide">
+                    <h3 className="text-base md:text-lg leading-none font-extrabold text-gray-900 tracking-wide">
                       {row.before.title}
                     </h3>
-                    <p className="text-[17px] text-[#00000080] font-medium leading-[1.3] pr-2">
+                    <p className="text-base md:text-[17px] text-[#00000080] font-medium leading-[1.3] pr-2">
                       {row.before.description}
                     </p>
                   </div>
@@ -70,10 +70,10 @@ export default function WhatChangesCards() {
                     />
                   </div>
                   <div className="flex flex-col gap-1 mt-0.5">
-                    <h3 className="text-lg font-extrabold red-text tracking-wide">
+                    <h3 className="text-base md:text-lg leading-none font-extrabold red-text tracking-wide">
                       {row.after.title}
                     </h3>
-                    <p className="text-[17px] text-[#00000080] leading-[1.3] pr-2">
+                    <p className="text-base md:text-[17px] text-[#00000080] leading-[1.3] pr-2">
                       {row.after.description}
                     </p>
                   </div>

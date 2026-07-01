@@ -3,11 +3,11 @@ import React from "react";
 const CTA = () => {
   return (
     <section className="w-full bg-[#F9F9F9] text-center flex flex-col items-center py-24 padding-x">
-      <span className="text-[#fb1d10] uppercase tracking-wider font-medium text-[14px] md:text-[24px] lg:text-[32px] mb-4 block">
+      <span className="text-[#fb1d10] uppercase tracking-wider font-medium text-lg md:text-xl lg:text-2xl xl:text-[32px] mb-5 block">
         LET'S build it
       </span>
 
-      <h2 className="text-[#111] font-bold text-3xl md:text-[42px] lg:text-[72px] lg:leading-[1.2] tracking-[-0.02em] mb-7">
+      <h2 className="text-[#111] font-bold section-heading mb-5">
         Your Product Is <br className="hidden md:block" />
         Not Goind To Build <span className="text-[#fb1d10]">Itself</span>
       </h2>

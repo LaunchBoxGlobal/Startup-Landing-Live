@@ -6,12 +6,12 @@ export default function WhyUsSection() {
   return (
     <section className="section padding-x">
       <div
-        className={`w-full relative overflow-hidden z-20 text-start flex flex-col items-start gap-3`}
+        className={`w-full relative overflow-hidden z-20 text-start flex flex-col items-start`}
       >
         <p className="red-text font-medium tracking-widest uppercase text-lg md:text-xl lg:text-2xl xl:text-[32px] mb-5">
           Why us
         </p>
-        <h2 className="text-4xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-[72px] font-bold text-[#111111] tracking-tight leading-[1]">
+        <h2 className="section-heading">
           A Lot of Agencies Build MVPs <br className="hidden lg:block" />
           Here's What Makes Us <span className="text-[#ea2b2b]">Different</span>
         </h2>

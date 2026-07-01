@@ -4,14 +4,14 @@ import WhatChangesCards from "./WhatChangesCards";
 const WhatChanges = () => {
   return (
     <section className="w-full section padding-x relative">
-      <section className="bg-transparent pt-24 relative">
+      <section className="bg-transparent lg:pt-24 relative">
         <div
-          className={`w-full relative overflow-hidden z-20 text-center flex flex-col items-center gap-3`}
+          className={`w-full relative overflow-hidden z-20 text-center flex flex-col items-center`}
         >
           <p className="red-text font-medium tracking-widest uppercase text-lg md:text-xl lg:text-2xl xl:text-[32px] mb-5">
             What Changes
           </p>
-          <h2 className="text-4xl sm:text-6xl md:text-5xl lg:text-6xl xl:text-[72px] font-bold text-[#111111] tracking-tight leading-[1]">
+          <h2 className="section-heading">
             What Your Startup Looks <br className="hidden lg:block" /> Like
             After
             <span className="text-[#ea2b2b]">Launch</span>

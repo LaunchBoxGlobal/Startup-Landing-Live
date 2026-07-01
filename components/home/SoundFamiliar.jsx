@@ -21,11 +21,13 @@ const SoundFamiliar = () => {
 
       <SoundFamiliarAnimation />
 
-      <p className="mx-auto text-center text-[24px] mt-10">
-        If this is where you are right now, you are exactly{" "}
-        <br className="hidden lg:block" /> who we built this
-        <span className="red-text">for.</span>
-      </p>
+      <div className="w-full padding-x">
+        <p className="mx-auto text-center text-lg md:text-xl lg:text-[24px] lg:mt-10">
+          If this is where you are right now, you are exactly{" "}
+          <br className="hidden lg:block" /> who we built this
+          <span className="red-text">for.</span>
+        </p>
+      </div>
     </section>
   );
 };
