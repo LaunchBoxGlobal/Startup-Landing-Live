@@ -51,7 +51,7 @@ export default function HiringExternalTeam() {
       title: "Will my future CTO be able to work with what you build?",
       icon: User,
       content: {
-        heading: "Built for your future team",
+        heading: "Will my future CTO be able to work with what you build?",
         text: "We write clean, documented, and standard code (often React, Node.js, Next.js). We don't use obscure proprietary frameworks. When your CTO comes on board, they will be happy to inherit our repository, not rewrite it.",
         features: [
           { icon: FileText, label: "Detailed Documentation" },
@@ -70,7 +70,7 @@ export default function HiringExternalTeam() {
       title: "Can I trust an external team with my idea?",
       icon: Lock,
       content: {
-        heading: "Your intellectual property is yours.",
+        heading: "Can I trust an external team with my idea?",
         text: "We sign NDAs before we even start talking details. From day one of development, all IP, source code, and assets are legally assigned to your company. We are just the builders.",
         features: [
           { icon: Lock, label: "Strict NDAs" },
@@ -89,7 +89,7 @@ export default function HiringExternalTeam() {
       title: "Is this going to cost more than just hiring freelancers?",
       icon: Coins,
       content: {
-        heading: "Value over hourly rates.",
+        heading: "Is this going to cost more than just hiring freelancers?",
         text: "Freelancers might have lower hourly rates, but managing them, integrating their work, and fixing gaps costs you time and money. We provide a full product team for a predictable price.",
         features: [
           { icon: Coins, label: "Fixed Scope Pricing" },
@@ -108,7 +108,7 @@ export default function HiringExternalTeam() {
       title: "What if the product needs to change during the build?",
       icon: Wrench,
       content: {
-        heading: "Agile, not rigid.",
+        heading: "What if the product needs to change during the build?",
         text: "Initial plans always change when they hit reality. We build in sprints and adapt based on your early feedback or changes in market validation. We are flexible partners.",
         features: [
           { icon: Activity, label: "Agile Sprints" },
@@ -127,7 +127,7 @@ export default function HiringExternalTeam() {
       title: "Will this look like it was outsourced?",
       icon: Laptop,
       content: {
-        heading: "Premium quality, indistinguishable from in-house.",
+        heading: "Will this look like it was outsourced?",
         text: "We don't do 'good enough'. Our designers craft modern, pixel-perfect interfaces. Our engineers build fluid, responsive experiences. Your users won't know it was built by an agency.",
         features: [
           { icon: Laptop, label: "Pixel-Perfect UI" },

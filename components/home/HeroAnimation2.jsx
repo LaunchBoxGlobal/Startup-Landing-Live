@@ -31,7 +31,7 @@ const HeroAnimation2 = () => {
             alt=""
             width={498}
             height={360}
-            className="w-full h-auto"
+            className="w-full h-auto relative z-20"
             priority
           />
         </motion.div>
@@ -58,7 +58,7 @@ const HeroAnimation2 = () => {
             alt=""
             width={200}
             height={360}
-            className="w-full h-auto"
+            className="w-full h-auto relative z-20"
             priority
           />
         </motion.div>

@@ -1,6 +1,7 @@
 import { FileText, ShieldCheck, User } from "lucide-react";
 import React from "react";
 import { motion, AnimatePresence } from "motion/react";
+import Image from "next/image";
 
 const TabContent = ({ tabs, activeTab }) => {
   return (
@@ -33,19 +34,67 @@ const TabContent = ({ tabs, activeTab }) => {
 
             {/* Decorative Illustration for Tab 1, or generic for others */}
             <div className="lg:w-2/5 flex items-center justify-center relative">
-              <div className="w-32 h-32 bg-red-50 rounded-full flex items-center justify-center relative">
-                <div className="absolute inset-0 bg-red-100/50 rounded-full blur-xl scale-125"></div>
-                <div className="w-16 h-16 bg-[#ef4444] rounded-2xl flex items-center justify-center shadow-lg shadow-red-500/30 z-10 text-white relative">
-                  <ShieldCheck size={32} strokeWidth={2.5} />
-                  {/* Floating dots/icons */}
-                  <div className="absolute -top-4 -left-4 w-6 h-6 bg-white rounded-full shadow border-2 border-red-50 flex items-center justify-center text-red-500 text-[10px]">
-                    <FileText size={12} />
-                  </div>
-                  <div className="absolute -bottom-2 -right-6 w-8 h-8 bg-white rounded-full shadow border-2 border-red-50 flex items-center justify-center text-red-500">
-                    <User size={14} />
-                  </div>
-                  <div className="absolute -top-6 -right-2 w-5 h-5 bg-white rounded-full shadow border-2 border-red-50"></div>
+              <div className="w-full max-w-[165px] h-[165px] relative rounded-full">
+                <div className="w-[36px] h-[36px] bg-white custom-shadow rounded-full absolute top-[-10%] left-1/2 -translate-x-1/2 z-10 flex items-center justify-center">
+                  <Image
+                    src="/user.png"
+                    alt="user"
+                    width={14}
+                    height={16}
+                    className="object-contain"
+                  />
                 </div>
+                <div className="w-[36px] h-[36px] bg-white custom-shadow rounded-full absolute top-[30%] left-[-10%] z-10 flex items-center justify-center">
+                  <Image
+                    src="/file-icon.png"
+                    alt="file-icon"
+                    width={16}
+                    height={20}
+                    className="object-contain"
+                  />
+                </div>
+                <div className="w-[36px] h-[36px] bg-white custom-shadow rounded-full absolute bottom-[-1%] left-[10%] z-10 flex items-center justify-center">
+                  <Image
+                    src="/message-icon.png"
+                    alt="message-icon"
+                    width={16}
+                    height={16}
+                    className="object-contain"
+                  />
+                </div>
+                <div className="w-[36px] h-[36px] bg-white custom-shadow rounded-full absolute top-[30%] right-[-10%] z-10 flex items-center justify-center">
+                  <Image
+                    src="/calendar.png"
+                    alt="calendar"
+                    width={16}
+                    height={17}
+                    className="object-contain"
+                  />
+                </div>
+                <div className="w-[36px] h-[36px] bg-white custom-shadow rounded-full absolute bottom-[-1%] right-[10%] z-10 flex items-center justify-center">
+                  <Image
+                    src="/real-time-progress-tracking.png"
+                    alt="progress"
+                    width={19}
+                    height={19}
+                    className="object-contain"
+                  />
+                </div>
+
+                <div className="w-[10px] h-[10px] bg-red-500 custom-shadow rounded-full absolute bottom-[25%] left-[2%] z-10 flex items-center justify-center"></div>
+                <div className="min-w-[8px] h-[8px] opacity-90 bg-red-500 custom-shadow rounded-full absolute bottom-[25%] left-[20%] z-10 flex items-center justify-center"></div>
+                <div className="min-w-[8px] h-[8px] opacity-90 bg-red-500 custom-shadow rounded-full absolute top-[10%] right-[15%] z-10 flex items-center justify-center"></div>
+                <div className="min-w-[6px] h-[6px] opacity-70 bg-red-500 custom-shadow rounded-full absolute bottom-[25%] right-[22%] z-10 flex items-center justify-center"></div>
+                <div className="min-w-[6px] h-[6px] opacity-70 bg-red-500 custom-shadow rounded-full absolute bottom-[35%] right-[2%] z-10 flex items-center justify-center"></div>
+                <div className="min-w-[6px] h-[6px] opacity-70 bg-red-500 custom-shadow rounded-full absolute top-[15%] right-[45%] z-10 flex items-center justify-center"></div>
+                <div className="min-w-[6px] h-[6px] opacity-70 bg-red-500 custom-shadow rounded-full absolute top-[15%] left-[10%] z-10 flex items-center justify-center"></div>
+                <Image
+                  src={"/circle-card.png"}
+                  alt="circle-card"
+                  width={164}
+                  height={164}
+                  className="object-contain"
+                />
               </div>
             </div>
           </div>
@@ -55,12 +104,12 @@ const TabContent = ({ tabs, activeTab }) => {
             {tabs[activeTab].content.features.map((feature, i) => (
               <div
                 key={i}
-                className="flex flex-col items-center justify-center text-center p-4 bg-gray-50/50 rounded-2xl border border-gray-100/50"
+                className="flex flex-col items-center justify-center text-center p-4 white"
               >
-                <div className="w-10 h-10 bg-white rounded-full shadow-sm flex items-center justify-center text-[#ef4444] mb-3">
-                  <feature.icon size={18} />
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center text-[#ef4444] mb-3">
+                  <feature.icon size={20} />
                 </div>
-                <span className="text-[0.8rem] font-bold text-gray-700 leading-tight">
+                <span className="text-[12px] font-semibold text-[#4A4A4A] leading-tight">
                   {feature.label}
                 </span>
               </div>
@@ -70,16 +119,21 @@ const TabContent = ({ tabs, activeTab }) => {
           {/* Commitment Box */}
           <div className="mt-auto relative">
             <div className="absolute inset-0 bg-gradient-to-r from-red-50 to-orange-50/30 rounded-2xl"></div>
-            <div className="relative p-6 border border-red-100 rounded-2xl">
-              <div className="flex items-center space-x-2 text-xs font-bold text-[#ef4444] uppercase tracking-wider mb-3">
-                <ShieldCheck size={14} />
-                <span>OUR COMMITMENT</span>
+            <div className="relative p-6 border border-red-100 border-l-4 border-l-red-500 rounded-2xl">
+              <div className="flex items-center space-x-2 text-sm font-bold uppercase tracking-wider mb-3">
+                <Image
+                  src={"/out-commitment.png"}
+                  width={40}
+                  height={40}
+                  alt="out-commitment"
+                />
+                <span className="red-text">OUR COMMITMENT</span>
               </div>
-              <p className="text-gray-900 font-medium text-[0.95rem] leading-relaxed mb-4">
+              <p className="text-gray-900 font-medium text-vbaseleading-relaxed mb-4">
                 {tabs[activeTab].content.commitment.text}
               </p>
-              <div className="inline-flex items-center space-x-1.5 bg-white px-3 py-1.5 rounded-full border border-red-100 text-xs font-bold text-gray-700 shadow-sm">
-                <span className="text-green-500">✓</span>
+              <div className="inline-flex items-center space-x-1.5 bg-white px-3 py-1.5 rounded-full border border-[#F6D5D0] text-xs font-bold red-text shadow-sm">
+                <span className="red-text">✓</span>
                 <span>{tabs[activeTab].content.commitment.badge}</span>
               </div>
             </div>
