@@ -24,10 +24,10 @@ import Image from "next/image";
 
 export default function WhoWeWorkWith() {
   return (
-    <div className="section padding-x flex justify-center overflow-hidden">
+    <div className="section padding-x flex items-start justify-center overflow-hidden">
       <div className="max-w-[1240px] w-full grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16">
         {/* Left Column */}
-        <div className="flex flex-col pt-8">
+        <div className="flex flex-col">
           <div className="red-text font-medium text-lg md:text-xl lg:text-2xl xl:text-[32px] mb-5 uppercase">
             Who we work with
           </div>

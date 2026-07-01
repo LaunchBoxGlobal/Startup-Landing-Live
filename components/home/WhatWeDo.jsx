@@ -21,7 +21,7 @@ const WhatWeDo = () => {
         </p>
       </div>
 
-      <div className="flex items-center justify-center py-10">
+      <div className="flex items-center justify-center pt-10">
         <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {/* Card 1 */}
           <div className="bg-[#FCF5F3] rounded-[24px] p-6 lg:p-8 flex flex-col hover:shadow-xl transition-shadow duration-300">

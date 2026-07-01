@@ -3,7 +3,7 @@ import React from "react";
 
 const StatsRow = () => {
   return (
-    <div className="flex flex-wrap justify-between gap-x-8 gap-y-6 mt-auto border-t border-b border-gray-100 py-8">
+    <div className="flex flex-wrap justify-between gap-x-8 gap-y-6 mt-auto border-t border-b border-gray-100 py-8 mb-7">
       <div className="flex items-center gap-3">
         <div className="w-[50px] h-[50px] lg:w-[60px] lg:h-[60px] rounded-full bg-[#FEE9E7] flex items-center justify-center text-[#FF2B2B]">
           <Star className="w-7 h-7 fill-current text-[#FF2B2B]" />

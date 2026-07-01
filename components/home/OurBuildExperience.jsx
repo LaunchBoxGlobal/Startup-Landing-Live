@@ -53,6 +53,7 @@ const OurBuildExperience = () => {
         })}
       </div>
 
+      {/* RED CTA */}
       <div className="w-full mt-10 red-bg rounded-[24px] py-6 p-5 lg:px-8 lg:h-[152px] flex items-center justify-between gap-6 flex-col lg:flex-row">
         <div className="w-full md:w-[70%] lg:w-1/2">
           <p className="text-xl lg:text-[24px] font-semibold text-white leading-[1.3]">

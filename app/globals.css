@@ -74,7 +74,7 @@ body {
 }
 
 .section {
-  @apply bg-transparent py-12 lg:py-24 relative;
+  @apply bg-transparent py-14 lg:py-24 relative;
 }
 
 .section-heading {

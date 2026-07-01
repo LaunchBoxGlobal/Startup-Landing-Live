@@ -1,38 +1,42 @@
 export const HOME_PAGE_FAQS = [
   {
-    question: "How much does a custom platform cost?",
+    question: "How much does an MVP cost?",
     answer:
-      "It depends entirely on what you need, which is why we start with a Workflow Audit. Simple dashboard integrations start lower; full custom operations platforms are a larger investment. What we can tell you is that we scope everything upfront so there are no surprises. You'll know the full cost before anything starts.",
+      "It depends on scope and complexity. After the Discovery Call we give you a detailed proposal with a fixed price and timeline. Simple MVPs start lower; multi-platform products with complex backends are a larger investment. You will know the full number before you commit.",
   },
   {
-    question: "How long does it take to build?",
+    question: "How long will it take?",
     answer:
-      "Again, it depends on scope. A focused integration or dashboard can be delivered in 4–8 weeks. A full custom platform typically takes 3–6 months. We'll give you a clear timeline in the proposal before you commit.",
+      "Most MVPs we build launch within 90 to 120 days. Simpler, well-scoped products can be faster. We will give you a specific timeline in the proposal based on your actual scope.",
   },
   {
-    question:
-      "We already use tools like QuickBooks, HubSpot, and others. Can you work with those?",
+    question: "What do I need to have ready before we start?",
     answer:
-      "Yes. We can integrate with most major tools and build a unified layer on top of them, so you keep what's working and fill in what's missing.",
+      "Ideally a Figma file, a product spec, or at minimum a clear description of what you are building and who it is for. If you have nothing designed yet, we can start with a discovery and scoping phase before the build begins.",
   },
   {
-    question: "Do we need a technical person on our team to work with you?",
+    question: "What tech stack do you use?",
     answer:
-      "Not at all. We work with business owners and operators every day. We handle all the technical complexity and communicate in plain language throughout the process.",
+      "We choose the stack based on what is right for your product, not what is most convenient for us. We work across React, React Native, Node.js, Python, and major cloud platforms. Everything we build is standard, modern, and handoff-ready.",
   },
   {
-    question: "What happens after the platform is launched?",
+    question: "Do you do design as well as development?",
     answer:
-      "We offer ongoing support and maintenance, and we're available to build on top of the platform as your business grows. You're not on your own after go-live.",
+      "Yes. We have UX and product designers on the team. If you already have Figma files we work from those. If you need design from scratch we handle that too.",
   },
   {
-    question: "Will we own the software?",
+    question: "Who owns the code?",
     answer:
-      "Yes, fully. The code, the platform, and all your data belong to you. There are no recurring fees to us and no lock-in of any kind.",
+      "You do. Fully. All code, all repositories, all infrastructure. No exceptions.",
   },
   {
-    question: "What if we're not sure exactly what we need?",
+    question: "What happens after launch?",
     answer:
-      "That's exactly what the Workflow Audit is for. You don't need to come with a spec sheet. Come with your problems and we'll help figure out the right solution together.",
+      "We offer post-launch support and can continue building with you as your product evolves. But there is no obligation. If you want to take it fully in-house, we make that transition as smooth as possible.",
+  },
+  {
+    question: "Can you work with our existing investors or accelerator?",
+    answer:
+      "Yes. We are comfortable presenting to investors, joining milestone calls, and working within accelerator timelines. We understand the startup context and operate accordingly.",
   },
 ];

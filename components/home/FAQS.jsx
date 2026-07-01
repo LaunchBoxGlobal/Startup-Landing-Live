@@ -24,7 +24,7 @@ export default function FAQS() {
         </h2>
       </div>
 
-      <div className="w-full flex flex-col gap-3 md:gap-4 mt-10">
+      <div className="w-full flex flex-col gap-3 md:gap-4 mt-10 lg:mt-0">
         {HOME_PAGE_FAQS?.map((faq, index) => {
           const isOpen = openIndex === index;
 
