@@ -22,7 +22,7 @@ const Process = () => {
 
       <ProcessTimeline />
 
-      <div className="w-[80vw] h-[60vw] rounded-full absolute top-1/2 -translate-x-1/2 left-1/2 -translate-y-1/2 z-0 blur-[200px] bg-red-500/20" />
+      <div className="w-[80vw] h-[60vw] rounded-full absolute top-0 -translate-x-1/2 left-1/2 z-0 blur-[200px] bg-red-500/20 opacity-40" />
     </section>
   );
 };

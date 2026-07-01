@@ -1,8 +1,11 @@
+"use client";
 import { BUILD_EXPERIENCE } from "@/constants/buildExperience";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 const OurBuildExperience = () => {
+  const [ishovered, setIsHovered] = useState(false);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
     <section className="section padding-x">
       <div
@@ -24,17 +27,23 @@ const OurBuildExperience = () => {
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 bg-gray-100 gap-[1px] my-10">
         {BUILD_EXPERIENCE?.map((appType, index) => {
           const Icon = appType.icon;
+          const redIcon = appType.redIcon;
+
           return (
             <div
               key={index}
-              className={`bg-white p-8 md:p-10 group hover:bg-gray-100 transition-colors duration-300 flex flex-col items-start relative overflow-hidden`}
+              onMouseEnter={() => {
+                setIsHovered(true);
+                setHoveredIndex(index);
+              }}
+              className={`bg-white p-8 md:p-10 group hover:bg-red-50 transition-colors duration-300 flex flex-col items-start relative overflow-hidden`}
             >
               <Image
-                src={Icon}
+                src={ishovered && hoveredIndex === index ? redIcon : Icon}
                 height={appType.height}
                 width={appType.width}
                 alt={appType.title}
-                className="text-black group-hover:text-red-600 transition-colors mb-6"
+                className="mb-6"
               />
               <h3 className="font-bold text-[0.95rem] tracking-wider uppercase mb-3 text-black transition-colors duration-300">
                 {appType.title}

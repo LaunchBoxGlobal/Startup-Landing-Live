@@ -8,12 +8,12 @@ const Hero = () => {
       aria-labelledby="hero-heading"
       className="w-full bg-transparent overflow-hidden relative pb-20"
     >
-      <div className="w-[180vw] h-[180vw] lg:w-[90vw] lg:h-[90vw] bg-red-500/20 rounded-full blur-[200px] absolute -top-[70%] left-1/2 -translate-x-1/2 opacity-80 z-0" />
+      <div className="w-[180vw] h-[180vw] lg:w-[90vw] lg:h-[90vw] bg-red-500/20 rounded-full blur-[200px] opacity-30 absolute -top-[70%] left-1/2 -translate-x-1/2 z-0" />
 
       <section className="w-full padding-x relative z-20 pt-36 xl:pt-44 flex flex-col items-center justify-start gap-5 lg:gap-[25px]">
         <h1
           id="hero-heading"
-          className="font-bold relative z-10 text-[8vw] md:text-[5.5vw] mb-1 text-center tracking-normal leading-none lg:leading-[1] w-full"
+          className="font-bold relative z-10 text-[8vw] md:text-[5vw] mb-1 text-center tracking-normal leading-none lg:leading-[1] w-full"
         >
           Funding Secured. Time to
           <span className="red-text"> Build</span>

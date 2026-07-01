@@ -51,13 +51,13 @@ const HeroAnimation2 = () => {
             duration: 0.8,
             ease: "easeOut",
           }}
-          className="absolute top-[16%] md:top-[24%] lg:top-[32%] z-10 w-[30%] sm:w-[28%] md:w-[26%] lg:w-[200px]"
+          className="absolute top-[16%] md:top-[24%] lg:top-[25%] z-10 w-[30%] sm:w-[28%] md:w-[26%] lg:w-[220px]"
         >
           <Image
             src="/hero-mobile-mockup.png"
             alt=""
-            width={200}
-            height={360}
+            width={280}
+            height={430}
             className="w-full h-auto relative z-20"
             priority
           />

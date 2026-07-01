@@ -6,7 +6,7 @@ import SoundFamiliarCard from "./SoundFamiliarCard";
 const SoundFamiliarAnimation = () => {
   return (
     <section className="w-full min-h-screen relative padding-x flex flex-col items-center gap-6 lg:gap-16 py-12 lg:py-20 lg:justify-center">
-      <div className="w-[80vw] h-[80vw] rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 bg-red-400/20 blur-3xl pointer-events-none" />
+      <div className="w-[100vw] h-[100vw] rounded-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 bg-red-400/20 blur-3xl pointer-events-none opacity-30" />
 
       {/* 01 */}
       <SoundFamiliarCard

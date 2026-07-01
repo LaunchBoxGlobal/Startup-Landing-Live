@@ -71,7 +71,7 @@ export default function HeroAnimation() {
         className="relative w-[1100px] h-[600px] scale-[0.35] xs:scale-[0.65] sm:scale-65 md:scale-[0.65] xl:scale-100 flex items-center justify-center transform-origin-center transition-transform duration-500 ease-out"
       >
         {/* Soft center red glow */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-red-400/20 rounded-full blur-[80px] pointer-events-none z-0"></div>
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-red-400/20 rounded-full blur-[80px] pointer-events-none z-0 opacity-60"></div>
 
         {/* --- SVG Paths Layer --- */}
         <svg

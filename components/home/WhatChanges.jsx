@@ -25,7 +25,7 @@ const WhatChanges = () => {
 
       <WhatChangesCards />
 
-      <div className="w-[100vw] h-[100vw] rounded-full bg-red-500/20 blur-[200px] opacity-60 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-0" />
+      <div className="w-[100vw] h-[100vw] rounded-full bg-red-500/20 blur-[200px] opacity-30 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-0" />
     </section>
   );
 };

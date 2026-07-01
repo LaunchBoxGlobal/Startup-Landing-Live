@@ -42,7 +42,7 @@ body {
 }
 
 .red-outlined-btn {
-  @apply bg-white hover:bg-[#F40E00] border-[3px] border-[#F40E00] text-[#F40E00] rounded-[14px] w-auto px-3 lg:px-0 lg:w-[249px] h-[48px] lg:h-[64px] flex items-center justify-center gap-2 text-sm md:text-lg font-semibold hover:text-white transition-all duration-300;
+  @apply bg-red-50 hover:bg-[#F40E00] border-[3px] border-[#F40E00] text-[#F40E00] rounded-[14px] w-auto px-3 lg:px-0 lg:w-[249px] h-[48px] lg:h-[64px] flex items-center justify-center gap-2 text-sm md:text-lg font-semibold hover:text-white transition-all duration-300;
 }
 
 .white-btn {

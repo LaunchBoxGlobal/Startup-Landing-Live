@@ -22,7 +22,7 @@ export default function WhyUsSection() {
         </p>
       </div>
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 pt-10">
+      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 pt-10 relative z-20">
         {WHY_US?.map((card) => (
           <div
             key={card.id}
@@ -41,10 +41,17 @@ export default function WhyUsSection() {
                   className="object-contain"
                 />
               </div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-red-500/5 rounded-full blur-3xl z-0"></div>
+              <Image
+                src={"/why-us-card-glow.png"}
+                alt="why-us-card-glow"
+                width={270}
+                height={270}
+                className="absolute top-0 right-0 z-0 opacity-80"
+              />
+              {/* <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-red-500/5 rounded-full blur-3xl z-0"></div> */}
             </div>
 
-            <div className="p-8 flex-grow">
+            <div className="p-8 flex-grow bg-white">
               <h3 className="text-[24px] font-semibold text-gray-900 mb-3 tracking-tight">
                 {card.title}
               </h3>
@@ -55,6 +62,8 @@ export default function WhyUsSection() {
           </div>
         ))}
       </div>
+
+      <div className="w-[100vw] h-[100vw] rounded-full bg-red-500/20 blur-[200px] opacity-30 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-0" />
     </section>
   );
 }

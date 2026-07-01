@@ -33,15 +33,24 @@ export default function HiringExternalTeam() {
       icon: ShieldCheck,
       content: {
         heading: "What if you disappear halfway through the build?",
-        text: "We get it. It has happened to founders before. That is why we structure every engagement with milestone- based delivery, weekly check-ins, and a dedicated point of contact. You always know what is happeningand you have real recourse if we miss a milestone.",
+        text: "We get it. It has happened to founders before. That is why we structure every engagement with milestone-based delivery, weekly check-ins, and a dedicated point of contact. You always know what is happening and you have real recourse if we miss a milestone.",
         features: [
-          { icon: Calendar, label: "Milestone-Based Delivery" },
-          { icon: PhoneCall, label: "Weekly Demo Calls" },
-          { icon: User, label: "Dedicated Project Lead" },
-          { icon: Activity, label: "Real-Time Progress Tracking" },
+          {
+            icon: "/milestone-based-delivery-icon.png",
+            label: "Milestone-Based Delivery",
+          },
+          { icon: "/weekly-demo-calls.png", label: "Weekly Demo Calls" },
+          {
+            icon: "/dedicated-project-lead.png",
+            label: "Dedicated Project Lead",
+          },
+          {
+            icon: "/real-time-progress-tracking.png",
+            label: "Real-Time Progress Tracking",
+          },
         ],
         commitment: {
-          text: "\"If we miss a milestone, you don't pay for it — it's written into every contract. You're never stuck with a team that's gone quiet.\"",
+          text: `“If we miss a milestone, you don't pay for it — it's written into every contract. You're never stuck with a team that's gone quiet.”`,
           badge: "Written into every contract",
         },
       },
@@ -52,16 +61,22 @@ export default function HiringExternalTeam() {
       icon: User,
       content: {
         heading: "Will my future CTO be able to work with what you build?",
-        text: "We write clean, documented, and standard code (often React, Node.js, Next.js). We don't use obscure proprietary frameworks. When your CTO comes on board, they will be happy to inherit our repository, not rewrite it.",
+        text: "Yes. We build to industry-standard practices, document everything, and hand over clean, well-structured code. We have had multiple clients where the incoming CTO specifically noted the codebase was easy to inherit.",
         features: [
-          { icon: FileText, label: "Detailed Documentation" },
-          { icon: Laptop, label: "Standard Tech Stack" },
-          { icon: ShieldCheck, label: "Code Quality Checks" },
-          { icon: Package, label: "Easy Handoff" },
+          {
+            icon: "/documentation-icon.png",
+            label: "Full Documentation",
+          },
+          {
+            icon: "/industry-standard-content.png",
+            label: "Industry-Standard Code",
+          },
+          { icon: "/code-quality-icon.png", label: "CTO Ready" },
+          { icon: "/easy-handoff-icon.png", label: "Clean Handover" },
         ],
         commitment: {
-          text: '"We build as if we are going to maintain it for the next 5 years, even if we hand it off next month."',
-          badge: "Clean Code Guarantee",
+          text: `“Clean, documented handover or we keep working until your CTO signs off. No black boxes and no lock-in to us.”`,
+          badge: "Handover guaranteed",
         },
       },
     },
@@ -71,16 +86,22 @@ export default function HiringExternalTeam() {
       icon: Lock,
       content: {
         heading: "Can I trust an external team with my idea?",
-        text: "We sign NDAs before we even start talking details. From day one of development, all IP, source code, and assets are legally assigned to your company. We are just the builders.",
+        text: "We sign NDAs before any detailed conversation. We have worked with funded founders on sensitive, pre-launch products for years. Your idea is safe and we have no interest in anything other than building your product well.",
         features: [
-          { icon: Lock, label: "Strict NDAs" },
-          { icon: FileText, label: "IP Ownership Clauses" },
-          { icon: ShieldCheck, label: "Secure Development" },
-          { icon: User, label: "Private Repositories" },
+          { icon: "/strict-nda-icon.png", label: "NDA First" },
+          {
+            icon: "/ownership-clause-icon.png",
+            label: "Confidential by Default",
+          },
+          { icon: "/secure.png", label: "Funded Founders" },
+          {
+            icon: "/private-repository-icon.png",
+            label: "Pre-Launch Experience",
+          },
         ],
         commitment: {
-          text: '"You own the codebase from the very first commit. There is no vendor lock-in and no hostage situations."',
-          badge: "100% IP Transferred",
+          text: `“NDA signed before any detailed conversation. Always, with no exceptions.”`,
+          badge: "Signed before we talk",
         },
       },
     },
@@ -90,16 +111,19 @@ export default function HiringExternalTeam() {
       icon: Coins,
       content: {
         heading: "Is this going to cost more than just hiring freelancers?",
-        text: "Freelancers might have lower hourly rates, but managing them, integrating their work, and fixing gaps costs you time and money. We provide a full product team for a predictable price.",
+        text: "Sometimes the hourly rate looks higher. But freelancers have no accountability, no coordination, and no shared ownership of the outcome. Most founders who come to us have already burned money and time on freelancers who did not deliver. One accountable team is almost always cheaper in the end.",
         features: [
-          { icon: Coins, label: "Fixed Scope Pricing" },
-          { icon: Package, label: "No Hidden Fees" },
-          { icon: Activity, label: "Faster Time-to-Market" },
-          { icon: User, label: "Full Team Included" },
+          { icon: "/scope-fixed-pricing.png", label: "Shared Ownership" },
+          { icon: "/no-hidden-fees.png", label: "Cheaper In The End" },
+          {
+            icon: "/faster-time-to-market.png",
+            label: "No Coordination Gaps",
+          },
+          { icon: "/team.png", label: "One Accountable Team" },
         ],
         commitment: {
-          text: '"We map out the exact cost to get to your MVP. You won\'t face surprise invoices or runaway hours."',
-          badge: "Predictable Pricing",
+          text: `“One fixed scope, one accountable team, one invoice. No surprise hours and no finger-pointing when something breaks.”`,
+          badge: "One accountable team",
         },
       },
     },
@@ -109,16 +133,16 @@ export default function HiringExternalTeam() {
       icon: Wrench,
       content: {
         heading: "What if the product needs to change during the build?",
-        text: "Initial plans always change when they hit reality. We build in sprints and adapt based on your early feedback or changes in market validation. We are flexible partners.",
+        text: "It will. Every product does. We build in structured sprints specifically so you can see progress, give feedback, and adjust direction without blowing up the entire timeline. We are not rigid. We are experienced.",
         features: [
-          { icon: Activity, label: "Agile Sprints" },
-          { icon: MessageSquare, label: "Regular Check-ins" },
-          { icon: Wrench, label: "Flexible Scoping" },
-          { icon: Rocket, label: "Iterative Releases" },
+          { icon: "/agile-sprints.png", label: "Structured Sprints" },
+          { icon: "/regular-checkins.png", label: "Adjust Direction" },
+          { icon: "/flexible-scoping.png", label: "Visible Progress" },
+          { icon: "/iterative-release.png", label: "Continuous Feedback" },
         ],
         commitment: {
-          text: '"We expect things to evolve. Our process is designed to handle pivots without derailing the entire project."',
-          badge: "Adaptable Process",
+          text: `“Scope changes between sprints carry no penalty. Adjusting direction is part of the process, not an exception to it.”`,
+          badge: "Built to flex",
         },
       },
     },
@@ -128,16 +152,16 @@ export default function HiringExternalTeam() {
       icon: Laptop,
       content: {
         heading: "Will this look like it was outsourced?",
-        text: "We don't do 'good enough'. Our designers craft modern, pixel-perfect interfaces. Our engineers build fluid, responsive experiences. Your users won't know it was built by an agency.",
+        text: "No. We have shipped products that have gone on to raise follow-on rounds, onboard paying customers, and demo to major investors. Your product will look, feel, and perform like it was built by a team that takes quality seriously. Because it was.",
         features: [
-          { icon: Laptop, label: "Pixel-Perfect UI" },
-          { icon: Activity, label: "Smooth Animations" },
-          { icon: ShieldCheck, label: "Premium Feel" },
-          { icon: User, label: "User-Centric UX" },
+          { icon: "/pixel-perfect.png", label: "Investor-Ready" },
+          { icon: "/activity.png", label: "Raised Follow-On Rounds" },
+          { icon: "/premium-feel.png", label: "Investor-Ready" },
+          { icon: "/user-experience.png", label: "Paying Customers" },
         ],
         commitment: {
-          text: '"Your app will look and feel like it was built by a top-tier SV tech team, because we hold ourselves to that standard."',
-          badge: "Premium Quality",
+          text: `"Investor-ready quality or we don't ship it. The exact same standard whether the product carries our name or yours."`,
+          badge: "Ships investor-ready",
         },
       },
     },
@@ -207,7 +231,7 @@ export default function HiringExternalTeam() {
         </button>
       </div>
 
-      <div className="w-[100vw] h-[100vw] rounded-full bg-red-500/20 blur-[200px] opacity-60 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-0" />
+      <div className="w-[100vw] h-[100vw] rounded-full bg-red-500/20 blur-[200px] opacity-40 absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-0" />
     </section>
   );
 }

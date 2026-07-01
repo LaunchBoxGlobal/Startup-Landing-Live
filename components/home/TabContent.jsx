@@ -27,7 +27,7 @@ const TabContent = ({ tabs, activeTab }) => {
             </h3>
           </div>
 
-          <div className="flex flex-col lg:flex-row gap-8 mb-10">
+          <div className="flex flex-col lg:flex-row gap-8 mb-6">
             <div className="lg:w-3/5 text-gray-500 font-medium leading-relaxed">
               <p>{tabs[activeTab].content.text}</p>
             </div>
@@ -100,14 +100,21 @@ const TabContent = ({ tabs, activeTab }) => {
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 lg:max-w-[65%]">
             {tabs[activeTab].content.features.map((feature, i) => (
               <div
                 key={i}
-                className="flex flex-col items-center justify-center text-center p-4 white"
+                className="flex flex-col items-center justify-start text-center px-2 white"
               >
                 <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center text-[#ef4444] mb-3">
-                  <feature.icon size={20} />
+                  {/* <feature.icon size={20} /> */}
+                  <Image
+                    src={feature.icon}
+                    width={18}
+                    height={18}
+                    alt="icon"
+                    className="object-contain"
+                  />
                 </div>
                 <span className="text-[12px] font-semibold text-[#4A4A4A] leading-tight">
                   {feature.label}

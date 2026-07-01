@@ -2,6 +2,7 @@ export const BUILD_EXPERIENCE = [
   {
     title: "MARKETPLACES",
     icon: "/marketplace-icon.png",
+    redIcon: "/marketplace-red-icon.png",
     width: 26,
     height: 27,
     description:
@@ -10,6 +11,7 @@ export const BUILD_EXPERIENCE = [
   {
     title: "MOBILITY APPS",
     icon: "/mobility-apps-icon.png",
+    redIcon: "/mobility-apps-red-icon.png",
     width: 15,
     height: 28,
     description:
@@ -18,6 +20,7 @@ export const BUILD_EXPERIENCE = [
   {
     title: "BOOKING PLATFORMS",
     icon: "/booking-platforms-icon.png",
+    redIcon: "/booking-platforms-red-icon.png",
     width: 27,
     height: 27,
     description:
@@ -26,6 +29,7 @@ export const BUILD_EXPERIENCE = [
   {
     title: "LOCAL SERVICES",
     icon: "/local-services-icon.png",
+    redIcon: "/local-services-red-icon.png",
     width: 25,
     height: 27,
     description:
@@ -34,6 +38,7 @@ export const BUILD_EXPERIENCE = [
   {
     title: "B2B WORKFLOW SAAS",
     icon: "/b2b-workflow-saas-icon.png",
+    redIcon: "/workflow-saas-red-icon.png",
     width: 27,
     height: 27,
     description:
@@ -42,6 +47,7 @@ export const BUILD_EXPERIENCE = [
   {
     title: "CONSUMER UTILITY",
     icon: "/consumer-utility-icon.png",
+    redIcon: "/consumer-utility-red-icon.png",
     width: 29,
     height: 29,
     description:
@@ -50,6 +56,7 @@ export const BUILD_EXPERIENCE = [
   {
     title: "SUBSCRIPTION APPS",
     icon: "/subscription-apps-icon.png",
+    redIcon: "/subscription-apps-red-icon.png",
     width: 15,
     height: 28,
     description:
@@ -58,6 +65,7 @@ export const BUILD_EXPERIENCE = [
   {
     title: "COMMUNITY & SOCIAL",
     icon: "/community-and-social-icon.png",
+    redIcon: "/commnunity-and-social-red-icon.png",
     width: 27,
     height: 27,
     description:

@@ -24,8 +24,9 @@ import Image from "next/image";
 
 export default function WhoWeWorkWith() {
   return (
-    <div className="section padding-x flex items-start justify-center overflow-hidden">
-      <div className="max-w-[1240px] w-full grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16">
+    <div className="section padding-x flex items-start justify-center relative">
+      <div className="w-[60vw] h-[60vw] rounded-full absolute bottom-0 left-[-10%] z-0 blur-[200px] bg-red-500/20 opacity-30" />
+      <div className="max-w-[1240px] w-full grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 relative z-20">
         {/* Left Column */}
         <div className="flex flex-col">
           <div className="red-text font-medium text-lg md:text-xl lg:text-2xl xl:text-[32px] mb-5 uppercase">
