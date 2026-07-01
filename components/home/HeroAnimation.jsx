@@ -65,7 +65,7 @@ export default function HeroAnimation() {
   ];
 
   return (
-    <section className="bg-transparent overflow-hidden flex items-center justify-center h-[280px] md:h-[400px] lg:min-h-[700px]">
+    <section className="bg-transparent flex items-center justify-center h-[280px] md:h-[400px] lg:min-h-[700px]">
       <div
         ref={containerRef}
         className="relative w-[1100px] h-[600px] scale-[0.35] xs:scale-[0.65] sm:scale-65 md:scale-[0.65] xl:scale-100 flex items-center justify-center transform-origin-center transition-transform duration-500 ease-out"

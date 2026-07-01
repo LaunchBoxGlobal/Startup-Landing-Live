@@ -4,7 +4,7 @@ const SectionHeader = ({ pill, title, redTitle, description, className }) => {
   return (
     <div className={`w-full relative overflow-hidden z-20 ${className}`}>
       {pill && (
-        <p className="red-text font-medium tracking-widest uppercase text-lg md:text-xl lg:text-2xl xl:text-[32px] mb-5">
+        <p className="red-text font-medium tracking-widest uppercase text-lg md:text-xl lg:text-2xl xl:text-[32px] mb-5 leading-none">
           Sound Familiar?
         </p>
       )}

@@ -23,7 +23,7 @@ const Sidebar = ({ onclose }) => {
     <div
       className={`w-full md:w-1/2 lg:w-[35%] h-full bg-white px-6 float-end shadow-xl overflow-y-scroll`}
     >
-      <div className="w-full flex items-start justify-center">
+      <div className="w-full flex items-start justify-center pt-3">
         <Link
           href={"/"}
           className="rounded-[17px] bg-white block mt-1 w-full border-[#CECEEA] h-[50px] 2xl:h-[60px]"
@@ -44,6 +44,7 @@ const Sidebar = ({ onclose }) => {
           <IoClose className="w-full h-full red-text" />
         </button>
       </div>
+
       <ul className="flex border-t flex-col items-start w-full justify-center gap-2 py-5">
         <li>
           <button

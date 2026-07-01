@@ -1,22 +1,24 @@
 import React from "react";
-import SectionHeader from "../common/SectionHeader";
 import SoundFamiliarAnimation from "./SoundFamiliarAnimation";
 
 const SoundFamiliar = () => {
   return (
     <section className="section">
-      <div className="w-full padding-x pt-10">
-        <SectionHeader
-          pill={"Sound Familiar?"}
-          title={
-            "You Have the Vision, the Funding, and the Pressure. Just Not the"
-          }
-          redTitle={"Team"}
-          description={
-            "Most non-technical founders hit the same wall after closing their round. Here is what that usually looks like."
-          }
-          className={"text-center flex flex-col items-center gap-3"}
-        />
+      <div
+        className={`w-full relative overflow-hidden z-20 text-center flex flex-col items-center pt-10 padding-x`}
+      >
+        <p className="red-text font-medium tracking-widest uppercase text-lg md:text-xl lg:text-2xl xl:text-[32px] mb-5">
+          Sound Familiar?
+        </p>
+        <h2 className="section-heading">
+          You Have The Vision, The Funding, <br className="hidden lg:block" />{" "}
+          And The Pressure. Just Not The{" "}
+          <span className="text-[#ea2b2b]">Team</span>
+        </h2>
+        <p className="text-gray-400 font-light leading-[1.2] text-lg md:text-xl xl:text-[24px] md:max-w-[95%] mt-5">
+          Most non-technical founders hit the same wall after closing their
+          round. Here is what that usually looks like.
+        </p>
       </div>
 
       <SoundFamiliarAnimation />

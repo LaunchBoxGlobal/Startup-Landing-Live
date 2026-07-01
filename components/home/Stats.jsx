@@ -16,6 +16,7 @@ const Stats = () => {
           <p className="text-[52px] font-extrabold leading-none">5</p>
           <p className="font-medium text-gray-100">Years Building Products</p>
         </div>
+
         <div className="col-span-1 lg:col-span-2 text-center md:text-start">
           <p className="font-medium text-gray-100">
             Trusted by founders building:
