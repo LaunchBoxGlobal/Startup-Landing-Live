@@ -95,7 +95,7 @@ const SoundFamiliarAnimation = () => {
         />
 
         {/* animated svgs right */}
-        <div className="w-[20px] md:w-[50px] h-[20px] md:h-[50px] bg-white border-2 border-gray-300 rounded-xl absolute right-[12%] lg:right-[14%] top-[20%] md:top-[17%] lg:top-[12%] flex items-center justify-center">
+        <div className="w-[20px] md:w-[50px] h-[20px] md:h-[50px] bg-white border-2 border-gray-300 rounded-xl absolute right-[12%] md:right-[8%] lg:right-[12%] top-[10%] md:top-[27%] lg:top-[17%] z-30 flex items-center justify-center">
           <Image
             src="/animated-check-icon.gif"
             alt="animated-tick-icon"
@@ -108,7 +108,7 @@ const SoundFamiliarAnimation = () => {
             loading="lazy"
           />
         </div>
-        <div className="w-[20px] md:w-[50px] h-[20px] md:h-[50px] bg-white border-2 border-gray-300 rounded-xl absolute right-[7%] top-[53.6%] lg:top-[56.5%] flex items-center justify-center">
+        <div className="w-[20px] md:w-[50px] h-[20px] md:h-[50px] bg-white border-2 border-gray-300 rounded-xl absolute right-[4%] top-[42%] md:top-[53.6%] lg:top-[56.5%] flex items-center justify-center z-30">
           <Image
             src="/animated-settings-icon.gif"
             alt="animated-settings-icon"
@@ -121,7 +121,7 @@ const SoundFamiliarAnimation = () => {
             loading="lazy"
           />
         </div>
-        <div className="w-[20px] md:w-[50px] h-[20px] md:h-[50px] bg-white border-2 border-gray-300 rounded-xl absolute right-[20%] lg:right-[20%] bottom-[15%] lg:bottom-[11%] flex items-center justify-center">
+        <div className="w-[20px] md:w-[50px] h-[20px] md:h-[50px] bg-white border-2 border-gray-300 rounded-xl absolute right-[21%] md:right-[14%] lg:right-[19%] bottom-[10%] md:bottom-[25%] lg:bottom-[18%] z-30 flex items-center justify-center p-0.5 md:p-0">
           <Image
             src="/animated-shaking-hands.gif"
             alt="animated-shaking-hands"
@@ -136,7 +136,7 @@ const SoundFamiliarAnimation = () => {
         </div>
 
         {/* animated svgs left */}
-        <div className="w-[20px] md:w-[50px] h-[20px] md:h-[50px] bg-white border-2 border-gray-300 rounded-xl absolute left-[13.8%] lg:left-[14.8%] top-[22%] lg:top-[14%] flex items-center justify-center">
+        <div className="w-[20px] md:w-[50px] h-[20px] md:h-[50px] bg-white border-2 border-gray-300 rounded-xl absolute left-[13.8%] lg:left-[14%] top-[16%] md:top-[26%] lg:top-[20%] z-30 flex items-center justify-center">
           <Image
             src="/bolt-ai-icon.webp"
             alt="bolt ai icon"
@@ -145,7 +145,7 @@ const SoundFamiliarAnimation = () => {
             loading="lazy"
           />
         </div>
-        <div className="w-[20px] md:w-[50px] h-[20px] md:h-[50px] bg-white border-2 border-gray-300 rounded-xl absolute left-[7%] top-[55.7%] lg:top-[59%] flex items-center justify-center">
+        <div className="w-[20px] md:w-[50px] h-[20px] md:h-[50px] bg-white border-2 border-gray-300 rounded-xl absolute left-[7%] top-[61%] md:top-[55.7%] lg:top-[59%] flex items-center justify-center z-30 p-1 md:p-0">
           <Image
             src="/lovable-icon.webp"
             alt="lovable icon"
@@ -154,7 +154,7 @@ const SoundFamiliarAnimation = () => {
             loading="lazy"
           />
         </div>
-        <div className="w-[20px] md:w-[50px] h-[20px] md:h-[50px] bg-white border-2 border-gray-300 rounded-xl absolute left-[21%] lg:left-[22%] bottom-[19%] md:bottom-[17%] lg:bottom-[11%] flex items-center justify-center">
+        <div className="w-[20px] md:w-[50px] h-[20px] md:h-[50px] bg-white border-2 border-gray-300 rounded-xl absolute left-[21%] md:left-[19%] lg:left-[21%] bottom-[12%] md:bottom-[24%] lg:bottom-[16%] z-30 flex items-center justify-center p-1 md:p-0">
           <Image
             src="/google-firebase-icon.webp"
             alt="google firebase icon"
