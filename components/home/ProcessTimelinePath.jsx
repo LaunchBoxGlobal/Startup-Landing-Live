@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 
 export default function ProcessTimelinePath() {
@@ -9,17 +8,11 @@ export default function ProcessTimelinePath() {
   return (
     <svg
       viewBox="0 0 1439 292"
-      className="absolute top-[32%] left-0 w-full h-auto pointer-events-none rotate-3"
+      className="absolute top-[32%] left-0 w-full h-auto pointer-events-none"
       fill="none"
     >
       {/* Gray path */}
-      <path
-        d={path}
-        stroke="#ECEDEF"
-        strokeWidth="5"
-        strokeDasharray="10 10"
-        strokeLinecap="round"
-      />
+      <path d={path} stroke="#f78383" strokeWidth="5" strokeLinecap="round" />
 
       {/* Animated Red Path */}
       <motion.path
@@ -27,7 +20,6 @@ export default function ProcessTimelinePath() {
         stroke="#EF4444"
         strokeWidth="5"
         strokeLinecap="round"
-        strokeDasharray="10 10"
         initial={{
           pathLength: 0,
           opacity: 1,

@@ -103,6 +103,7 @@ export default function HeroAnimation() {
                 d={`M 0,0 C ${item.dot.x * 0.4},0 ${item.dot.x * 0.6},${item.dot.y} ${item.dot.x},${item.dot.y}`}
                 fill="none"
                 stroke={`url(#line-gradient-${item.id})`}
+                vectorEffect="non-scaling-stroke"
                 strokeWidth="2"
                 initial={{ pathLength: 0, opacity: 0 }}
                 animate={

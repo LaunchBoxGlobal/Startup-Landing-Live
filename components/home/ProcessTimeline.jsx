@@ -45,13 +45,21 @@ const ProcessTimeline = () => {
   return (
     <>
       {/* ============== DESKTOP (lg and up) — unchanged original layout ============== */}
-      <div className="w-full relative pt-20 pl-[5%] mt-20 hidden lg:block">
+      <div className="w-full relative pt-20 pl-[5%] mt-20 hidden lglg:block">
         <ProcessTimelinePath />
+
+        <Image
+          src={"/process-timeline.svg"}
+          alt="process timeline"
+          width={1900}
+          height={500}
+          className="absolute inset-x-0 top-[40%] z-0 rotate-1 opacity-40"
+        />
 
         {/* card 1 */}
         <div
           key={timeline[0].title}
-          className={`flex flex-col items-center text-center w-full max-w-[260px] relative top-3`}
+          className={`flex flex-col items-center text-center w-full max-w-[260px] relative top-6`}
         >
           {/* Number */}
           <Image
@@ -76,8 +84,8 @@ const ProcessTimeline = () => {
           <div className="h-[90px] flex items-start justify-center relative z-10 mt-10">
             <Image
               src={timeline[0].icon}
-              width={114}
-              height={114}
+              width={134}
+              height={134}
               alt={`${timeline[0].title} icon`}
               className="object-contain"
             />
@@ -87,15 +95,15 @@ const ProcessTimeline = () => {
         {/* card 2 */}
         <div
           key={timeline[1].title}
-          className={`flex flex-col items-center text-center w-full max-w-[260px] absolute top-[21%] left-[36%]`}
+          className={`flex flex-col items-center text-center w-full max-w-[260px] absolute top-[24%] left-[36%]`}
         >
           {/* Icon above number, only when iconPosition === "top" */}
           <Image
             src={timeline[1].icon}
-            width={114}
-            height={114}
+            width={134}
+            height={134}
             alt={`${timeline[1].title} icon`}
-            className="object-contain relative z-10 mb-16"
+            className="object-contain relative z-10 mb-10"
           />
 
           {/* Number */}
@@ -121,7 +129,7 @@ const ProcessTimeline = () => {
         {/* card 3 */}
         <div
           key={timeline[2].title}
-          className={`flex flex-col items-center text-center w-full max-w-[260px] absolute right-[27%] top-[2%]`}
+          className={`flex flex-col items-center text-center w-full max-w-[260px] absolute right-[26.5%] top-[2%]`}
         >
           {/* Number */}
           <Image
@@ -143,11 +151,11 @@ const ProcessTimeline = () => {
           </div>
 
           {/* Icon below text, only when iconPosition === "bottom" */}
-          <div className="h-[90px] flex items-start justify-center relative z-10 mt-14 mx-auto">
+          <div className="h-[90px] flex items-start justify-center relative z-10 mt-10 mx-auto">
             <Image
               src={timeline[2].icon}
-              width={114}
-              height={114}
+              width={134}
+              height={134}
               alt={`${timeline[2].title} icon`}
               className="object-contain mx-auto"
             />
@@ -157,15 +165,15 @@ const ProcessTimeline = () => {
         {/* card 4 */}
         <div
           key={timeline[3].title}
-          className={`flex flex-col items-center text-center w-full max-w-[260px] absolute top-[59%] right-[1%]`}
+          className={`flex flex-col items-center text-center w-full max-w-[260px] absolute top-[63%] right-[1%]`}
         >
           {/* Icon above number, only when iconPosition === "top" */}
           <Image
             src={timeline[3].icon}
-            width={114}
-            height={114}
+            width={134}
+            height={134}
             alt={`${timeline[3].title} icon`}
-            className="object-contain relative z-10 mb-4"
+            className="object-contain relative z-10 mb-2"
           />
 
           {/* Number */}
@@ -190,7 +198,7 @@ const ProcessTimeline = () => {
       </div>
 
       {/* ============== MOBILE + TABLET (below lg) — stacked vertical timeline ============== */}
-      <div className="w-full lg:hidden px-6 sm:px-10 mt-10">
+      <div className="w-full lglg:hidden px-6 sm:px-10 mt-10">
         <div className="relative flex flex-col gap-12 sm:gap-14 max-w-md sm:max-w-xl mx-auto">
           {/* vertical connecting line */}
           <div className="absolute left-[27px] sm:left-[35px] top-2 bottom-2 w-px bg-gray-300 z-0" />
