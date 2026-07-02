@@ -80,3 +80,7 @@ body {
 .section-heading {
   @apply text-3xl md:text-4xl lg:text-5xl midlg:text-6xl xl:text-[72px] font-bold text-[#111111] tracking-tight leading-[1];
 }
+
+.number {
+  @apply inline-block bg-gradient-to-b from-[#c7c6c6] to-[#ffffff] bg-clip-text text-transparent group-hover:from-[#f9bdbd] group-hover:to-[#fc5050] transition-all duration-300;
+}

@@ -59,19 +59,22 @@ const ProcessTimeline = () => {
         {/* card 1 */}
         <div
           key={timeline[0].title}
-          className={`flex flex-col items-center text-center w-full max-w-[260px] relative top-6`}
+          className={`flex flex-col items-center text-center w-full max-w-[260px] relative group top-6`}
         >
           {/* Number */}
-          <Image
+          {/* <Image
             src={timeline[0].num}
             width={timeline[0].width}
             height={147}
             alt={`${timeline[0].title} number`}
             className="object-contain relative bottom-[-8%] z-10"
-          />
+          /> */}
+          <span className="text-[10vw] font-extrabold relative bottom-[-8%] number">
+            1
+          </span>
 
           {/* Text block */}
-          <div className={`max-w-[260px] relative z-10`}>
+          <div className={`max-w-[260px] relative z-10 top-[-70px]`}>
             <h3 className="font-bold leading-none text-left">
               {timeline[0].title}
             </h3>
@@ -95,7 +98,7 @@ const ProcessTimeline = () => {
         {/* card 2 */}
         <div
           key={timeline[1].title}
-          className={`flex flex-col items-center text-center w-full max-w-[260px] absolute top-[24%] left-[36%]`}
+          className={`flex flex-col items-center text-center w-full max-w-[260px] absolute top-[24%] left-[36%] group`}
         >
           {/* Icon above number, only when iconPosition === "top" */}
           <Image
@@ -106,17 +109,12 @@ const ProcessTimeline = () => {
             className="object-contain relative z-10 mb-10"
           />
 
-          {/* Number */}
-          <Image
-            src={timeline[1].num}
-            width={timeline[1].width}
-            height={147}
-            alt={`${timeline[1].title} number`}
-            className="object-contain relative bottom-[-8%] z-10"
-          />
+          <span className="text-[10vw] font-extrabold relative bottom-[-8%] number z-10">
+            2
+          </span>
 
           {/* Text block */}
-          <div className={`max-w-[260px] relative z-10`}>
+          <div className={`max-w-[260px] relative z-10 top-[-80px]`}>
             <h3 className="font-bold leading-none text-left">
               {timeline[1].title}
             </h3>
@@ -129,16 +127,19 @@ const ProcessTimeline = () => {
         {/* card 3 */}
         <div
           key={timeline[2].title}
-          className={`flex flex-col items-center text-center w-full max-w-[260px] absolute right-[26.5%] top-[2%]`}
+          className={`flex flex-col items-center text-center w-full max-w-[260px] absolute right-[26.5%] top-[-14%] group`}
         >
           {/* Number */}
-          <Image
+          {/* <Image
             src={timeline[2].num}
             width={timeline[2].width}
             height={147}
             alt={`${timeline[2].title} number`}
             className="object-contain relative bottom-[-8%] z-10"
-          />
+          /> */}
+          <span className="text-[10vw] font-extrabold relative bottom-[-80px] number z-10">
+            3
+          </span>
 
           {/* Text block */}
           <div className={`max-w-[260px] relative z-10`}>
@@ -165,7 +166,7 @@ const ProcessTimeline = () => {
         {/* card 4 */}
         <div
           key={timeline[3].title}
-          className={`flex flex-col items-center text-center w-full max-w-[260px] absolute top-[63%] right-[1%]`}
+          className={`flex flex-col items-center text-center w-full max-w-[260px] absolute top-[63%] right-[1%] group`}
         >
           {/* Icon above number, only when iconPosition === "top" */}
           <Image
@@ -177,16 +178,19 @@ const ProcessTimeline = () => {
           />
 
           {/* Number */}
-          <Image
+          {/* <Image
             src={timeline[3].num}
             width={timeline[3].width}
             height={147}
             alt={`${timeline[3].title} number`}
             className="object-contain relative z-10 bottom-[-8%] right-14"
-          />
+          /> */}
+          <span className="text-[10vw] font-extrabold relative bottom-[60px] right-14 number z-10">
+            4
+          </span>
 
           {/* Text block */}
-          <div className={`max-w-[260px] relative z-10 right-14`}>
+          <div className={`max-w-[260px] relative z-10 right-14 top-[-130px]`}>
             <h3 className="font-bold leading-none text-left">
               {timeline[3].title}
             </h3>
