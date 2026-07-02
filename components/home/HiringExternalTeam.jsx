@@ -177,8 +177,7 @@ export default function HiringExternalTeam() {
         </p>
         <h2 className="section-heading">
           Things Founders Worry About <br className="hidden lg:block" /> Before
-          Hiring an External
-          <span className="text-[#ea2b2b]">Team</span>
+          Hiring an External <span className="text-[#ea2b2b]">Team</span>
         </h2>
         <p className="text-gray-400 font-light leading-[1.2] text-lg md:text-xl xl:text-[24px] md:max-w-[75%] mt-5">
           We have heard every concern. Here are the honest answers.

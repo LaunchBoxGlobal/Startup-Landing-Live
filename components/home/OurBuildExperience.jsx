@@ -15,7 +15,7 @@ const OurBuildExperience = () => {
           Our Build Experience
         </p>
         <h2 className="section-heading">
-          We Have Shipped <br className="hidden lg:block" /> Products Like Yours
+          We Have Shipped <br className="hidden lg:block" /> Products Like Yours{" "}
           <span className="text-[#ea2b2b]">Before</span>
         </h2>
         <p className="text-gray-400 font-light leading-[1.2] text-lg md:text-xl xl:text-[24px] md:max-w-[75%] mt-5">

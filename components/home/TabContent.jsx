@@ -2,6 +2,7 @@ import { FileText, ShieldCheck, User } from "lucide-react";
 import React from "react";
 import { motion, AnimatePresence } from "motion/react";
 import Image from "next/image";
+import HiringAnimation from "./HiringAnimation";
 
 const TabContent = ({ tabs, activeTab }) => {
   return (
@@ -33,70 +34,7 @@ const TabContent = ({ tabs, activeTab }) => {
             </div>
 
             {/* Decorative Illustration for Tab 1, or generic for others */}
-            <div className="lg:w-2/5 flex items-center justify-center relative">
-              <div className="w-full max-w-[165px] h-[165px] relative rounded-full">
-                <div className="w-[36px] h-[36px] bg-white custom-shadow rounded-full absolute top-[-10%] left-1/2 -translate-x-1/2 z-10 flex items-center justify-center">
-                  <Image
-                    src="/user.png"
-                    alt="user"
-                    width={14}
-                    height={16}
-                    className="object-contain"
-                  />
-                </div>
-                <div className="w-[36px] h-[36px] bg-white custom-shadow rounded-full absolute top-[30%] left-[-10%] z-10 flex items-center justify-center">
-                  <Image
-                    src="/file-icon.png"
-                    alt="file-icon"
-                    width={16}
-                    height={20}
-                    className="object-contain"
-                  />
-                </div>
-                <div className="w-[36px] h-[36px] bg-white custom-shadow rounded-full absolute bottom-[-1%] left-[10%] z-10 flex items-center justify-center">
-                  <Image
-                    src="/message-icon.png"
-                    alt="message-icon"
-                    width={16}
-                    height={16}
-                    className="object-contain"
-                  />
-                </div>
-                <div className="w-[36px] h-[36px] bg-white custom-shadow rounded-full absolute top-[30%] right-[-10%] z-10 flex items-center justify-center">
-                  <Image
-                    src="/calendar.png"
-                    alt="calendar"
-                    width={16}
-                    height={17}
-                    className="object-contain"
-                  />
-                </div>
-                <div className="w-[36px] h-[36px] bg-white custom-shadow rounded-full absolute bottom-[-1%] right-[10%] z-10 flex items-center justify-center">
-                  <Image
-                    src="/real-time-progress-tracking.png"
-                    alt="progress"
-                    width={19}
-                    height={19}
-                    className="object-contain"
-                  />
-                </div>
-
-                <div className="w-[10px] h-[10px] bg-red-500 custom-shadow rounded-full absolute bottom-[25%] left-[2%] z-10 flex items-center justify-center"></div>
-                <div className="min-w-[8px] h-[8px] opacity-90 bg-red-500 custom-shadow rounded-full absolute bottom-[25%] left-[20%] z-10 flex items-center justify-center"></div>
-                <div className="min-w-[8px] h-[8px] opacity-90 bg-red-500 custom-shadow rounded-full absolute top-[10%] right-[15%] z-10 flex items-center justify-center"></div>
-                <div className="min-w-[6px] h-[6px] opacity-70 bg-red-500 custom-shadow rounded-full absolute bottom-[25%] right-[22%] z-10 flex items-center justify-center"></div>
-                <div className="min-w-[6px] h-[6px] opacity-70 bg-red-500 custom-shadow rounded-full absolute bottom-[35%] right-[2%] z-10 flex items-center justify-center"></div>
-                <div className="min-w-[6px] h-[6px] opacity-70 bg-red-500 custom-shadow rounded-full absolute top-[15%] right-[45%] z-10 flex items-center justify-center"></div>
-                <div className="min-w-[6px] h-[6px] opacity-70 bg-red-500 custom-shadow rounded-full absolute top-[15%] left-[10%] z-10 flex items-center justify-center"></div>
-                <Image
-                  src={"/circle-card.png"}
-                  alt="circle-card"
-                  width={164}
-                  height={164}
-                  className="object-contain"
-                />
-              </div>
-            </div>
+            <HiringAnimation />
           </div>
 
           {/* Features Grid */}

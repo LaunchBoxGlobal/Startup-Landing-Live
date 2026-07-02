@@ -19,7 +19,7 @@ export default function FAQS() {
           Common Questions
         </p>
         <h2 id="faqs" className="section-heading relative z-10">
-          A Few More Things Founders Usually
+          A Few More Things Founders Usually{" "}
           <span className="text-[#ea2b2b]">Ask</span>
         </h2>
       </div>
