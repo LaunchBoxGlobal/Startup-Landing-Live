@@ -27,7 +27,7 @@ const CTA = () => {
         </button>
         <button
           type="button"
-          className="w-full sm:w-auto h-[60px] px-8 lg:px-20 bg-transparent border-[3px] border-[#fb1d10] hover:bg-[#fb1d10] text-[#fb1d10] hover:text-white font-bold text-[18px] rounded-xl flex items-center justify-center transition-colors duration-200"
+          className="w-full sm:w-auto h-[60px] px-8 lg:px-20 bg-white border-[3px] border-[#fb1d10] hover:bg-[#fb1d10] text-[#fb1d10] hover:text-white font-bold text-[18px] rounded-xl flex items-center justify-center transition-colors duration-200"
         >
           See Our Work
         </button>
@@ -35,7 +35,8 @@ const CTA = () => {
 
       <p className="text-[#333] text-[17px] md:text-[19px] lg:text-[24px] lg:max-w-[60%] mx-auto font-medium leading-[1.4]">
         Free call. No commitment. Just an honest conversation about your product
-        and whether we are the right team to build it.
+        and whether we are the right team to{" "}
+        <span className="red-text">build it.</span>
       </p>
     </section>
   );

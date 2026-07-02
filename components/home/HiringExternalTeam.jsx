@@ -223,7 +223,7 @@ export default function HiringExternalTeam() {
         </div>
         <button
           type="button"
-          className="bg-[#ef4444] hover:bg-red-600 text-white px-6 py-4 rounded-[11px] font-bold text-sm transition-colors flex items-center space-x-2 w-full md:w-auto justify-center"
+          className="bg-[#ef4444] text-white px-6 py-4 rounded-[11px] font-bold text-sm flex items-center space-x-2 w-full md:w-auto justify-center hover:bg-black transition-all duration-300"
         >
           <span>Book a Free Discovery Call</span>
           <ChevronRight size={16} />
