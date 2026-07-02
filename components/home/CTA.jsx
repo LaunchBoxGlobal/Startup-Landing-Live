@@ -9,7 +9,7 @@ const CTA = () => {
 
       <h2 className="text-[#111] font-bold section-heading mb-5">
         Your Product Is <br className="hidden md:block" />
-        Not Goind To Build <span className="text-[#fb1d10]">Itself</span>
+        Not Going To Build <span className="text-[#fb1d10]">Itself</span>
       </h2>
 
       <p className="text-[#9ca3af] text-[18px] md:text-[22px] lg:text-[24px] leading-[1.5] font-light lg:max-w-[70%] mb-8">
