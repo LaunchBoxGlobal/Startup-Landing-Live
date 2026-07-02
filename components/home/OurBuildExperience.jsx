@@ -36,6 +36,10 @@ const OurBuildExperience = () => {
                 setIsHovered(true);
                 setHoveredIndex(index);
               }}
+              onMouseLeave={() => {
+                setIsHovered(false);
+                setHoveredIndex(null);
+              }}
               className={`bg-white p-8 md:p-10 group hover:bg-red-50 transition-colors duration-300 flex flex-col items-start relative overflow-hidden`}
             >
               <Image
