@@ -36,7 +36,7 @@ const CTA = ({ toggleDiscoveryCallForm }) => {
         </Link>
       </div>
 
-      <p className="text-[#333] text-[17px] md:text-[19px] lg:text-[24px] lg:max-w-[60%] mx-auto font-medium leading-[1.4]">
+      <p className="text-[#333] text-[17px] md:text-[19px] lg:text-[24px] lg:max-w-[60%] mx-auto font-normal leading-[1.4]">
         Free call. No commitment. Just an honest conversation about your product
         and whether we are the right team to{" "}
         <span className="red-text">build it.</span>

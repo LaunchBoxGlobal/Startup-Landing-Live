@@ -57,7 +57,7 @@ const Hero = ({ toggleDiscoveryCallForm }) => {
         className="object-contain absolute top-0 z-0 inset-x-0"
       />
 
-      <p className="text-lg lg:text-[24px] font-medium leading-[1.35] mx-auto text-center max-w-6xl padding-x relative z-10">
+      <p className="text-lg lg:text-[24px] font-normal leading-[1.35] mx-auto text-center max-w-6xl padding-x relative z-10">
         We have shipped MVPs for funded founders across marketplaces, mobility
         apps, booking platforms, B2B SaaS, and more.
       </p>
