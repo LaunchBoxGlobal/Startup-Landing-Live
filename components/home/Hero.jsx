@@ -1,11 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import HeroAnimationLoop from "./HeroAnimationLoop";
+import Link from "next/link";
 
-const Hero = () => {
+const Hero = ({ toggleDiscoveryCallForm }) => {
   return (
     <section
       aria-labelledby="hero-heading"
+      id="home-hero"
       className="w-full bg-transparent overflow-hidden relative pb-20"
     >
       <div className="w-[180vw] h-[180vw] lg:w-[90vw] lg:h-[90vw] bg-red-500/20 rounded-full blur-[200px] opacity-30 absolute -top-[70%] left-1/2 -translate-x-1/2 z-0" />
@@ -27,19 +29,21 @@ const Hero = () => {
         <div className="flex items-center justify-center gap-3 lg:gap-5 w-full">
           <button
             type="button"
+            onClick={() => toggleDiscoveryCallForm()}
             aria-label="Book a Workflow Audit"
             className="red-btn"
           >
             Book a Free Discovery Call
           </button>
 
-          <a
-            href="#how-it-works"
+          <Link
+            href="https://launchboxglobal.com/case-studies"
+            target="_blank"
             aria-label="See How It Works"
             className="red-outlined-btn text-center"
           >
             See Our Work
-          </a>
+          </Link>
         </div>
       </section>
 

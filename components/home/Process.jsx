@@ -5,6 +5,7 @@ const Process = () => {
   return (
     <section className="section">
       <div
+        id="process"
         className={`w-full relative overflow-hidden z-20 text-center flex flex-col items-center padding-x`}
       >
         <p className="red-text font-medium tracking-widest uppercase text-lg md:text-xl lg:text-2xl xl:text-[32px] mb-5">

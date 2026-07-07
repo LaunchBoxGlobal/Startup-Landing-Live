@@ -23,7 +23,7 @@ import StatsBanner from "./StatsBanner";
 import TabsList from "./TabsList";
 import TabContent from "./TabContent";
 
-export default function HiringExternalTeam() {
+export default function HiringExternalTeam({ toggleDiscoveryCallForm }) {
   const [activeTab, setActiveTab] = useState(0);
 
   const tabs = [
@@ -223,6 +223,7 @@ export default function HiringExternalTeam() {
         </div>
         <button
           type="button"
+          onClick={() => toggleDiscoveryCallForm()}
           className="bg-[#ef4444] text-white px-6 py-4 rounded-[11px] font-bold text-sm flex items-center space-x-2 w-full md:w-auto justify-center hover:bg-black transition-all duration-300"
         >
           <span>Book a Free Discovery Call</span>

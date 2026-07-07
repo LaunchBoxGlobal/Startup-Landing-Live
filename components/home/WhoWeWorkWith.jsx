@@ -1,32 +1,18 @@
-import {
-  AlertTriangle,
-  Check,
-  CircleDollarSign,
-  Clock,
-  Code2,
-  Globe,
-  Leaf,
-  Lightbulb,
-  Package,
-  Rocket,
-  Settings,
-  ShieldCheck,
-  Star,
-  Users,
-  X,
-} from "lucide-react";
+import { X } from "lucide-react";
 import React from "react";
-import { FiFigma } from "react-icons/fi";
 import StatsRow from "./StatsRow";
 import JourneyCard from "./JourneyCard";
 import AreWeGood from "./AreWeGood";
 import Image from "next/image";
 
-export default function WhoWeWorkWith() {
+export default function WhoWeWorkWith({ toggleDiscoveryCallForm }) {
   return (
     <div className="section padding-x flex items-start justify-center relative">
       <div className="w-[60vw] h-[60vw] rounded-full absolute bottom-0 left-[-10%] z-0 blur-[200px] bg-red-500/20 opacity-30" />
-      <div className="max-w-[1240px] w-full grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 relative z-20">
+      <div
+        id="founders"
+        className="max-w-[1240px] w-full grid grid-cols-1 lg:grid-cols-[1.1fr_1fr] gap-12 lg:gap-16 relative z-20"
+      >
         {/* Left Column */}
         <div className="flex flex-col">
           <div className="red-text font-medium text-lg md:text-xl lg:text-2xl xl:text-[32px] mb-5 uppercase">
@@ -40,12 +26,18 @@ export default function WhoWeWorkWith() {
             To <span className="text-[#FF2B2B]">Move</span>
           </h1>
 
-          <p className="text-[#212121] text-lg md:text-xl xl:text-[24px] mt-5 leading-[1.2] mb-6">
+          <p className="text-gray-400 text-lg md:text-xl xl:text-[24px] mt-5 leading-[1.2] mb-6 font-light">
             We work best with founders who have funding, a clear vision, and the
             urgency to launch. If that is you, we should talk.
           </p>
 
-          <button className="red-btn">Book a Free Discovery Call</button>
+          <button
+            className="red-btn"
+            type="button"
+            onClick={() => toggleDiscoveryCallForm()}
+          >
+            Book a Free Discovery Call
+          </button>
 
           {/* Stats row */}
           <StatsRow />

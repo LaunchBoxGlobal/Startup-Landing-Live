@@ -4,6 +4,7 @@ const WhatWeDo = () => {
   return (
     <section className="section padding-x">
       <div
+        id="services"
         className={`w-full relative overflow-hidden z-20 text-center flex flex-col items-center`}
       >
         <p className="red-text font-medium tracking-widest uppercase text-lg md:text-xl lg:text-2xl xl:text-[32px] mb-5">

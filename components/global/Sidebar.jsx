@@ -3,19 +3,13 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React from "react";
 import { IoClose } from "react-icons/io5";
+import { NAV_LINKS } from "../../constants/nav-links";
 
-const Sidebar = ({ onclose }) => {
+const Sidebar = ({ onclose, scrollToSection, openModal }) => {
   const navigate = useRouter();
 
   const handleNavigate = (url) => {
     navigate.push(url);
-    toggleDropdown();
-    onclose();
-  };
-
-  const handleScrollToServices = (id) => {
-    const section = document.getElementById(id);
-    section?.scrollIntoView({ behavior: "smooth" });
     onclose();
   };
 
@@ -46,44 +40,41 @@ const Sidebar = ({ onclose }) => {
       </div>
 
       <ul className="flex border-t flex-col items-start w-full justify-center gap-2 py-5">
+        {NAV_LINKS?.map((nv) => {
+          return (
+            <li key={nv?.id}>
+              <button
+                type="button"
+                onClick={() => {
+                  scrollToSection(nv?.id);
+                  onclose();
+                }}
+                className={`font-normal text-[16px] 2xl:text-[22px] flex items-center justify-start gap-1 group`}
+              >
+                {nv?.title}
+              </button>
+            </li>
+          );
+        })}
         <li>
           <button
             type="button"
-            onClick={() => handleScrollToServices("how-it-works")}
+            onClick={() => handleNavigate("/get-in-touch")}
             className={`font-normal text-[16px] 2xl:text-[22px] flex items-center justify-start gap-1 group`}
           >
-            How It works
+            Get In Touch
           </button>
         </li>
-
         <li>
           <button
             type="button"
-            onClick={() => handleScrollToServices("who-we-work-with")}
+            onClick={() => {
+              openModal();
+              onclose();
+            }}
             className={`font-normal text-[16px] 2xl:text-[22px] flex items-center justify-start gap-1 group`}
           >
-            Who It's For
-          </button>
-        </li>
-        <li>
-          <button
-            type="button"
-            onClick={() => handleScrollToServices("faqs")}
-            className={`font-normal text-[16px] 2xl:text-[22px] flex items-center justify-start gap-1 group`}
-          >
-            FAQs
-          </button>
-        </li>
-
-        <li>
-          <button
-            type="button"
-            onClick={() =>
-              handleNavigate("https://www.launchboxglobal.com/case-studies")
-            }
-            className={`font-normal text-[16px] 2xl:text-[22px]`}
-          >
-            Case Studies
+            Book a Free Discovery Call
           </button>
         </li>
       </ul>

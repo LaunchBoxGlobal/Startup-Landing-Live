@@ -1,45 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import ProcessTimelinePath from "./ProcessTimelinePath";
-
-const timeline = [
-  {
-    icon: "/process-step-1.png",
-    num: "/discovery-call-num.png",
-    width: 56,
-    title: "Discovery Call",
-    description:
-      "We start with a free call to understand your product, your timeline, your funding stage, and what you need to hit your next milestone. No pitch. Just a real conversation about your build.",
-    iconPosition: "bottom",
-  },
-  {
-    icon: "/process-step-2.png",
-    num: "/scoping-and-proposal-num.png",
-    width: 84,
-    title: "Scoping and Proposal",
-    description:
-      "We map out your full MVP scope, tech stack, timeline, and cost. You will know exactly what you are getting, when it will be done, and what it will cost before anything starts.",
-    iconPosition: "top",
-  },
-  {
-    icon: "/process-step-3.png",
-    num: "/design-and-build-num.png",
-    width: 83,
-    title: "Design and Build",
-    description:
-      "Our team moves fast in structured sprints. You get weekly updates, working builds to review, and full transparency throughout. You are never left wondering what is happening.",
-    iconPosition: "bottom",
-  },
-  {
-    icon: "/process-step-4.png",
-    num: "/launch-and-handoff-num.png",
-    width: 90,
-    title: "Launch and Handoff",
-    description:
-      "We deploy your product, hand over all code and documentation, and make sure your team or future CTO can take it forward. You own everything, cleanly.",
-    iconPosition: "top",
-  },
-];
+import { PROCESS_TIMELINE } from "../../constants/process";
 
 const ProcessTimeline = () => {
   return (
@@ -58,17 +20,9 @@ const ProcessTimeline = () => {
 
         {/* card 1 */}
         <div
-          key={timeline[0].title}
+          key={PROCESS_TIMELINE[0].title}
           className={`flex flex-col items-center text-center w-full max-w-[260px] relative group top-6`}
         >
-          {/* Number */}
-          {/* <Image
-            src={timeline[0].num}
-            width={timeline[0].width}
-            height={147}
-            alt={`${timeline[0].title} number`}
-            className="object-contain relative bottom-[-8%] z-10"
-          /> */}
           <span className="text-[10vw] font-extrabold relative bottom-[-8%] number">
             1
           </span>
@@ -76,20 +30,20 @@ const ProcessTimeline = () => {
           {/* Text block */}
           <div className={`max-w-[260px] relative z-10 top-[-70px]`}>
             <h3 className="font-bold leading-none text-left">
-              {timeline[0].title}
+              {PROCESS_TIMELINE[0].title}
             </h3>
             <p className="text-[15px] font-light text-gray-700 leading-[1.35] mt-2 text-left">
-              {timeline[0].description}
+              {PROCESS_TIMELINE[0].description}
             </p>
           </div>
 
           {/* Icon below text, only when iconPosition === "bottom" */}
           <div className="h-[90px] flex items-start justify-center relative z-10 mt-10">
             <Image
-              src={timeline[0].icon}
+              src={PROCESS_TIMELINE[0].icon}
               width={134}
               height={134}
-              alt={`${timeline[0].title} icon`}
+              alt={`${PROCESS_TIMELINE[0].title} icon`}
               className="object-contain"
             />
           </div>
@@ -97,15 +51,15 @@ const ProcessTimeline = () => {
 
         {/* card 2 */}
         <div
-          key={timeline[1].title}
+          key={PROCESS_TIMELINE[1].title}
           className={`flex flex-col items-center text-center w-full max-w-[260px] absolute top-[24%] left-[36%] group`}
         >
           {/* Icon above number, only when iconPosition === "top" */}
           <Image
-            src={timeline[1].icon}
+            src={PROCESS_TIMELINE[1].icon}
             width={134}
             height={134}
-            alt={`${timeline[1].title} icon`}
+            alt={`${PROCESS_TIMELINE[1].title} icon`}
             className="object-contain relative z-10 mb-10"
           />
 
@@ -116,25 +70,25 @@ const ProcessTimeline = () => {
           {/* Text block */}
           <div className={`max-w-[260px] relative z-10 top-[-80px]`}>
             <h3 className="font-bold leading-none text-left">
-              {timeline[1].title}
+              {PROCESS_TIMELINE[1].title}
             </h3>
             <p className="text-[15px] font-light text-gray-700 leading-[1.35] mt-2 text-left">
-              {timeline[1].description}
+              {PROCESS_TIMELINE[1].description}
             </p>
           </div>
         </div>
 
         {/* card 3 */}
         <div
-          key={timeline[2].title}
+          key={PROCESS_TIMELINE[2].title}
           className={`flex flex-col items-center text-center w-full max-w-[260px] absolute right-[26.5%] top-[-14%] group`}
         >
           {/* Number */}
           {/* <Image
-            src={timeline[2].num}
-            width={timeline[2].width}
+            src={PROCESS_TIMELINE[2].num}
+            width={PROCESS_TIMELINE[2].width}
             height={147}
-            alt={`${timeline[2].title} number`}
+            alt={`${PROCESS_TIMELINE[2].title} number`}
             className="object-contain relative bottom-[-8%] z-10"
           /> */}
           <span className="text-[10vw] font-extrabold relative bottom-[-80px] number z-10">
@@ -144,20 +98,20 @@ const ProcessTimeline = () => {
           {/* Text block */}
           <div className={`max-w-[260px] relative z-10`}>
             <h3 className="font-bold leading-none text-left">
-              {timeline[2].title}
+              {PROCESS_TIMELINE[2].title}
             </h3>
             <p className="text-[15px] font-light text-gray-700 leading-[1.35] mt-2 text-left">
-              {timeline[2].description}
+              {PROCESS_TIMELINE[2].description}
             </p>
           </div>
 
           {/* Icon below text, only when iconPosition === "bottom" */}
           <div className="h-[90px] flex items-start justify-center relative z-10 mt-10 mx-auto">
             <Image
-              src={timeline[2].icon}
+              src={PROCESS_TIMELINE[2].icon}
               width={134}
               height={134}
-              alt={`${timeline[2].title} icon`}
+              alt={`${PROCESS_TIMELINE[2].title} icon`}
               className="object-contain mx-auto"
             />
           </div>
@@ -165,26 +119,18 @@ const ProcessTimeline = () => {
 
         {/* card 4 */}
         <div
-          key={timeline[3].title}
+          key={PROCESS_TIMELINE[3].title}
           className={`flex flex-col items-center text-center w-full max-w-[260px] absolute top-[63%] right-[1%] group`}
         >
           {/* Icon above number, only when iconPosition === "top" */}
           <Image
-            src={timeline[3].icon}
+            src={PROCESS_TIMELINE[3].icon}
             width={134}
             height={134}
-            alt={`${timeline[3].title} icon`}
+            alt={`${PROCESS_TIMELINE[3].title} icon`}
             className="object-contain relative z-10 mb-2"
           />
 
-          {/* Number */}
-          {/* <Image
-            src={timeline[3].num}
-            width={timeline[3].width}
-            height={147}
-            alt={`${timeline[3].title} number`}
-            className="object-contain relative z-10 bottom-[-8%] right-14"
-          /> */}
           <span className="text-[10vw] font-extrabold relative bottom-[60px] right-14 number z-10">
             4
           </span>
@@ -192,10 +138,10 @@ const ProcessTimeline = () => {
           {/* Text block */}
           <div className={`max-w-[260px] relative z-10 right-14 top-[-130px]`}>
             <h3 className="font-bold leading-none text-left">
-              {timeline[3].title}
+              {PROCESS_TIMELINE[3].title}
             </h3>
             <p className="text-[15px] font-light text-gray-700 leading-[1.35] mt-2 text-left">
-              {timeline[3].description}
+              {PROCESS_TIMELINE[3].description}
             </p>
           </div>
         </div>
@@ -207,7 +153,7 @@ const ProcessTimeline = () => {
           {/* vertical connecting line */}
           <div className="absolute left-[27px] sm:left-[35px] top-2 bottom-2 w-px bg-gray-300 z-0" />
 
-          {timeline.map((step, index) => (
+          {PROCESS_TIMELINE.map((step, index) => (
             <div
               key={step.title}
               className="relative z-10 flex items-start gap-5 sm:gap-7"

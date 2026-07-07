@@ -3,12 +3,13 @@ import { BUILD_EXPERIENCE } from "@/constants/buildExperience";
 import Image from "next/image";
 import React, { useState } from "react";
 
-const OurBuildExperience = () => {
+const OurBuildExperience = ({ toggleDiscoveryCallForm }) => {
   const [ishovered, setIsHovered] = useState(false);
   const [hoveredIndex, setHoveredIndex] = useState(null);
   return (
     <section className="section padding-x">
       <div
+        id="experience"
         className={`w-full relative overflow-hidden z-20 text-start flex flex-col items-start`}
       >
         <p className="red-text font-medium tracking-widest uppercase text-lg md:text-xl lg:text-2xl xl:text-[32px] mb-5">
@@ -77,6 +78,7 @@ const OurBuildExperience = () => {
         <div className="w-full max-w-[290px]">
           <button
             type="button"
+            onClick={() => toggleDiscoveryCallForm()}
             className="bg-white hover:bg-black hover:text-white transition-all duration-300 red-text rounded-[14px] flex items-center justify-center gap-2 px-5 py-4 text-lg font-medium w-full"
           >
             Book a Free Discovery Call
