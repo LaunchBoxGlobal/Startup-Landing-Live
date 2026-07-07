@@ -1,14 +1,38 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 export function Footer() {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const scrollToSection = (id) => {
+    const NAVBAR_HEIGHT = 120;
+
+    if (pathname === "/") {
+      const element = document.getElementById(id);
+      if (element) {
+        const top =
+          element.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT;
+        window.scrollTo({ top, behavior: "smooth" });
+      }
+    } else {
+      sessionStorage.setItem("scrollTarget", id);
+      router.push("/");
+    }
+  };
+
   return (
     <footer className="bg-[#212121] text-white py-16 md:py-24 md:pb-10 px-6 md:px-8 midlg:px-[5%] 2xl:px-[10%]">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 lg:gap-10">
         {/* Left Column */}
         <div className="md:col-span-12 lg:col-span-5 flex flex-col items-start space-y-8">
           {/* Logo Badge */}
-          <div className="inline-flex flex-row sm:items-center space-x-6 border border-[#CECEEA] rounded-[17px] px-3 py-2 lg:h-[57px] w-auto max-w-full">
+          <div
+            onClick={() => scrollToSection("home-hero")}
+            className="inline-flex flex-row sm:items-center cursor-pointer space-x-6 border border-[#CECEEA] rounded-[17px] px-3 py-2 lg:h-[57px] w-auto max-w-full"
+          >
             <div className="flex items-center space-x-2">
               <div className="flex items-center">
                 <Image
