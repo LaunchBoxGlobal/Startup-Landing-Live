@@ -27,7 +27,7 @@
   display: inline-block;
   font-size: 12px;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--lb-red);
   margin: 0 0 12px;
@@ -35,16 +35,16 @@
 
 .lb-form-title {
   font-size: 26px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.15;
   margin: 0 0 8px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
 }
 
 .lb-form-sub {
   font-size: 15px;
   color: var(--lb-ink-soft);
-  line-height: 1.5;
+  line-height: 1.35;
   margin: 0 0 28px;
 }
 
@@ -54,9 +54,9 @@
 
 .lb-label {
   display: block;
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 3px;
 }
 
 .lb-label .lb-optional {
@@ -133,7 +133,7 @@
   width: 100%;
   font-family: var(--font);
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--lb-white);
   background: var(--lb-red);
   border: none;

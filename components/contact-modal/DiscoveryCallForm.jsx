@@ -93,7 +93,7 @@ export default function DiscoveryCallForm({ onClose }) {
             type="button"
             onClick={onClose}
             aria-label="Close"
-            className="w-6 h-6 border rounded-md bg-gray-50 flex items-center justify-center absolute -top-1 -right-1 z-10"
+            className="w-6 h-6 border rounded-md bg-gray-50 flex items-center justify-center absolute -top-1 -right-1 z-10 p-0.5"
           >
             <X className="text-gray-500" />
           </button>
@@ -249,7 +249,7 @@ export default function DiscoveryCallForm({ onClose }) {
               disabled={formik.isSubmitting}
             >
               <span className="lb-submit-label">
-                {formik.isSubmitting ? "Sending" : "Book my free call"}
+                {formik.isSubmitting ? "Sending" : "Book My Free Call"}
               </span>
               {formik.isSubmitting && <span className="lb-spinner" />}
             </button>

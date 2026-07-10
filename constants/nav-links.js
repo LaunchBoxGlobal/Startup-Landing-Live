@@ -8,7 +8,7 @@ export const NAV_LINKS = [
     id: "experience",
   },
   {
-    title: "Founders",
+    title: "Criteria",
     id: "founders",
   },
   {
